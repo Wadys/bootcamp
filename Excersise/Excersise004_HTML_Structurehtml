@@ -1,0 +1,73 @@
+<!-- HTML Structure Instructions:
+Create a single HTML page that incorporates the following concepts: block and inline elements, HTML entities and symbols, and various 
+types of lists. This exercise will test your ability to apply these concepts effectively in a practical scenario.
+1. Block vs. Inline Elements
+-Create a section that demonstrates the difference between block and inline elements.
+-Include at least one block-level element use <div> and one inline element use <span> within the block element.
+-Add another block-level element outside the first to observe how the layout changes.
+2. HTML Entities and Symbols
+-Create a paragraph and within the paragraph add the content mentioned in the next points.
+-Use HTML entities to display at least two reserved characters (i.e, less-than, greater-than).
+-Include symbols like the copyright or registered trademark using both entities and direct symbols.
+3. Unordered Lists
+-Create an unordered list with at least three items.
+-Ensure that the items listed do not require a specific order.
+4. Ordered Lists
+-Create an ordered list with at least four steps for a process or sequence.
+-Choose a task where the order of items is crucial.
+5. Description Lists
+-Create a description list where you define at least three terms with their corresponding descriptions.
+-Ensure that the terms and definitions are clearly related and easy to understand. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise004</title>
+</head>
+<body>
+    <p>
+        <div>
+            This is the first block element <span style="border: 1px solid black;">with a segment within</span>
+        </div>
+        <div>This is the second block to show how the layout changes</div>
+    </p>
+    <p>
+        -Use HTML entities to display at least two reserved characters (i.e, less than &lt;, greater-than &gt;).<br>
+        -Include symbols like the copyright &#169;;  or registered trademark &trade; using both entities and direct symbols.
+    </p>
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Unordered Lists</li>
+        <li>Create an unordered list with at least three items.</li>
+        <li>Ensure that the items listed do not require a specific order.</li>
+    </ul>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>Wake Up</li>
+        <li>Bruth your teeth</li>
+        <li>Shower</li>
+        <li>
+            Get Dressed:
+            <ol>
+                <li>Underware</li>
+                <li>Pants</li>
+                <li>Shirt</li>
+                <li>Socks</li>
+                <li>Shoes</li>
+            </ol>
+        </li>
+        <li>Have a great day</li>
+    </ol>
+    <h3>Descriptiom List:</h3>
+    <dl>
+        <h5>User Details</h5>
+        <dt>Name:</dt>
+        <dd>Name given to the user made up of first name and last name.</dd>
+        <dt>Email:</dt>
+        <dd>Electronic email madeup from a user name an at symbol ( &#x40; ) followed by a domain name</dd>
+        <dt>Phone:</dt>
+        <dd>A land line number that is composed of an area code and continues by a number </dd>
+    </dl>
+</body>
+</html>

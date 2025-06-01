@@ -1,0 +1,78 @@
+<!-- Semantic HTML
+Instructions:
+Convert this non-semantic HTML page into a semantic version by replacing the non-semantic tags 
+(<div>, <ul>, etc.) with semantic elements. Your editor will already contain some HTML you need 
+to convert that to semantic markup and use the tags given below.
+
+Use the following tags in your solution:
+ <article>
+ <aside>
+ <details>
+ <footer>
+ <header>
+ <main>
+ <nav>
+ <section> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements Practical</title>
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+      <span></span><img src="logo.png" alt="Logo" height="50px" /></span>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <!-- Main Content -->
+        <h1>Welcome to Our Blog</h1>
+        <section>
+            <article>
+                <header>
+                    <h2>Blog Post Title One</h2>
+                </header>
+                <p>This is a short description of blog post one.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <header>
+                    <h2>Blog Post Title Two</h2>
+                </header>                
+                <p>This is a short description of blog post two.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <header>
+                    <h2>Blog Post Title Three</h2>
+                </header>
+                <p>This is a short description of blog post three.</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+        <!-- Sidebar -->
+        <section>
+            <aside>
+            <h3>Related Links</h3>
+                <ul>
+                    <li><a href="#">Link One</a></li>
+                    <li><a href="#">Link Two</a></li>
+                    <li><a href="#">Link Three</a></li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+    <!-- Page Footer -->
+    <footer>
+      <p>Copyright © 2023. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
