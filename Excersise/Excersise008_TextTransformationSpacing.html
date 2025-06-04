@@ -9,7 +9,42 @@ Instructions:
 Learning objective
 Learn to enhance the presentation of text on a web page by applying CSS properties 
 to control text transformation, indentation, letter spacing, line height, and word 
-spacing. -->
+spacing. 
+Proper way to solve it-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Text Styling Exercise</title>
+    <style>
+        header {
+            text-transform: uppercase;
+        }
+        h1{ 
+            letter-spacing: 2px;
+            line-height: 1.6;
+        } 
+        p {
+            text-transform: capitalize;
+            text-indent: 20px;
+        }
+        footer{
+            word-spacing: 8px;
+        } 
+    </style>
+</head>
+<body>
+    <header style="text-transform: uppercase;">Our Company</header>
+    <h1>Welcome to our website</h1>
+    <p>
+        This paragraph provides a brief overview of the content covered on our site.
+    </p>
+    <footer>Find out more about our services and offerings.</footer>
+    <br><a href="/index.html">Home</a>
+</body>
+</html>
+
+<!-- My way of solving it
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +55,18 @@ spacing. -->
     </style>
 </head>
 <body>
-    <header>Our Company</header>
-    <h1>Welcome to our website</h1>
-    <p>This paragraph provides a brief overview of the content covered on our site.</p>
-    <footer>Find out more about our services and offerings.</footer>
+    <header style="text-transform: uppercase;">Our Company</header>
+    <h1 style=
+        "letter-spacing: 2px;
+        line-height: 1.6;">
+        Welcome to our website
+    </h1>
+    <p style=
+        "text-transform: capitalize;
+        text-indent: 20px;">
+        This paragraph provides a brief overview of the content covered on our site.
+    </p>
+    <footer style="word-spacing: 8px;">Find out more about our services and offerings.</footer>
     <br><a href="/index.html">Home</a>
 </body>
-</html>
+</html> -->
