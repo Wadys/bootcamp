@@ -1,6 +1,37 @@
+/* This are common styles used by all files */
 p{
     font-size: 20px;
+    color: black;
+    text-align: left;
 }
+h1{
+    color: black;
+}
+/*This is a use of an id it always uses a # to invoke it */
 div{
     background-color: skyblue;
+    text-align: left
+}
+footer{
+    text-align: left
+}
+#red-para{
+    color: red;
+}
+/*This is a use of a class it always uses a . to invoke it */
+.blue-bg{
+    background-color: skyblue;
+}
+/*Because yellow was defined after blue then it will be called when both are used */
+.yellow-bg{
+    background-color: yellow;
+}
+/* Here we have a class within a class */
+.red-text{
+    color: red;
+}
+/*Universal Selctor This will impact every item because it's universal */
+*{
+    text-align: center;
+    color: blue;
 }
