@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selector</title>
+    <style>
+        /* This will cover all child paragraphs from the parent div */
+        div p{
+            color: blue;
+        }
+        /* This will cover direct child paragraphs from the parent div*/
+        div > p{
+            font-weight: bold;
+        }
+         /* Here we use a class to use the same hierarchy */
+        .main p{
+            color: red;   
+        }
+        /* Siblings definition */
+        h2 + p{
+            color: yellow;
+        }
+        /* All siblings of H2 */
+        h2 ~ p{
+            color: green;
+        }
+        a.highlighted{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>-Desendant of the div</p>
+        <div>
+            <p>-Another paragraph Desendant</p>
+            <span>
+                <p>This is not a direct child of paragraph</p>
+            </span>
+        </div>
+    </div>
+    <p>-Not a Descendant of div</p>
+    <div class="main">
+        <p>Desendant of Main</p>
+        <span>
+            <p>Aother Main Descendant</p>
+        </span>
+    </div>
+    <h2>H2 Heading</h2>
+    <p>Sibling of h2</p>
+    <p>Not an adjacent Sibling of h2</p>
+    <a href="https://google.com"> Google</a>
+    <a class="highlighted" href="http://www.f1.com"> Formul-1</a>
+</body>
+<footer>
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
