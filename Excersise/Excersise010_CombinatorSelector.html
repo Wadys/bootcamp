@@ -1,14 +1,54 @@
+<!--Combinator Selectors Excercise
+Instructions:
+1. Start with the provided HTML structure.
+2. Style the elements according to the following descriptions without directly 
+referencing the CSS syntax in the instructions:
+-Style the paragraphs within the section to have a font size of 16 pixels.
+-Ensure the list item immediately following the first list item within the unordered list has bold text.
+-Apply a background color of light gray to all list items after the second one within the same unordered list.
+-Set the font color of the heading inside the article to blue.
+
+Learning Objective:
+Understand and apply different CSS combinator selectors to style elements based 
+on their relationships and positions within the HTML document. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combinator Selectors Excercise</title>
+    <title>CSS Combinator Selectors Exercise</title>
+    <style>
+        p{
+            font-size: 16px;
+        }
+        ul li + li{
+            font-weight: bold;
+        }
+        ul li:nth-child(2) ~ li{
+            background-color: lightgray;
+        }
+        article h2{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-    
+    <section>
+        
+        <p>This is a paragraph within a section.</p>
+        <article>
+            <h2>Article Heading</h2>
+            <p>Another paragraph, this time within an article.</p>
+        </article>
+    </section>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+    </ul>
 </body>
 <footer>
-    <br><a href="/index.html">Home</a>
+    <a href="/index.html">Home</a>
 </footer>
 </html>
