@@ -17,16 +17,32 @@ LEarning Ovjective: Learn to apply CSS pseudo-elements to add decorative element
     <meta charset="UTF-8">
     <title>CSS Pseudo-Elements Exercise</title>
     <style>
-        .h2-heading::before{
-            content: "*";
+        h2::before{
+            content: "* ";
             font-size: 2rem;
             color: grey;
+        }
+        p::after{
+            content: " Read more...";
+            font-size: -1rem;
+            font-style: italic;
+            color: blue;
+        }
+        p::first-letter{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        p::first-line{
+            color: darkred;
+        }
+        li::marker{
+            content: "* ";
         }
     </style>
 </head>
 <body>
-    <h2 class="h2-heading">Section Title</h2>
-    <p>This paragraph introduces the topic of the section. It provides a detailed discussion on the subject, elaborating on various key points.</p>
+    <h2>Section Title</h2>
+    <p>This paragraph introduces the topic of the section. It provides a detailed discussion on the subject, elaborating on various key points. </p>
     <ul>
         <li>Point One</li>
         <li>Point Two</li>
