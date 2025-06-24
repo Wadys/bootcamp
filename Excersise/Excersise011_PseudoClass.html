@@ -1,0 +1,59 @@
+<!-- Pseudo Classes Exercise
+Instructions:
+1. Use the provided HTML structure.
+2. Apply styles to elements based on the following detailed descriptions:
+-For the link (<a> tag), apply the following colors to represent different states:
+ -Default state (:link): Color the text blue.
+ -Visited state (:visited): Color the text purple.
+ -Hover state (:hover): Color the text red.
+ -Active state (:active): Color the text green.
+-For the unordered list (<ul>):
+ -Color the background of the first item light blue.
+ -Make the text of the last item bold.
+ -Color the background of every second item in the list light gray.
+ Learmomg Objectives:
+   Master the application of CSS pseudo-classes to style  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Pseudo-Classes Exercise</title>
+    <style>
+      a:default{
+        color: blue;
+
+      }
+      a:visited{
+        color: purple;
+      }
+      a:hover{
+        color: red;
+      }
+      a:active{
+        color: green;
+      }
+      ul li:first-child{
+        background-color: lightblue;
+      }
+      ul li:last-child{
+        font-weight: bold;
+      }
+      ul li:nth-child(even){
+        background-color: lightgray;
+      }
+    </style>
+</head>
+<body>
+    <a href="https://example.com">Visit Example</a>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+</body>
+</html>
+<footer>
+    <a href="/index.html">Home</a>
+</footer>
