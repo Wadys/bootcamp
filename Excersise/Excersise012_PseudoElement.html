@@ -1,0 +1,39 @@
+<!-- Pseudo Elements Coding Exercise
+Instructions: 
+    1. Use the provided HTML structure.
+    2. Apply styles to elements according to the following detailed descriptions:
+        -Add a decorative asterisk before the content of each heading (h2) using a larger font size and a gray color.
+        -Append the text "Read more..." after each paragraph (p) using a small italic font and a blue color.
+        -Enlarge and bold the first letter of each paragraph to draw attention.
+        -Change the color of the first line in each paragraph to dark red to emphasize it.
+        -Customize the marker for each item in the unordered list to use an asterisk(*) instead of the traditional bullet.
+
+TEST CASES: DUE TO LIMITATIONS OF TESTING WITH PSEUDO ELEMENTS TEST CASES FOR THIS EXERCISE ARE NOT PRESENT.
+LEarning Ovjective: Learn to apply CSS pseudo-elements to add decorative elements before or after an element's content, style specific parts of text, and customize list markers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Pseudo-Elements Exercise</title>
+    <style>
+        .h2-heading::before{
+            content: "*";
+            font-size: 2rem;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="h2-heading">Section Title</h2>
+    <p>This paragraph introduces the topic of the section. It provides a detailed discussion on the subject, elaborating on various key points.</p>
+    <ul>
+        <li>Point One</li>
+        <li>Point Two</li>
+        <li>Point Three</li>
+    </ul>
+</body>
+<footer>
+    <a href="/index.html">Home</a>
+</footer>
+</html> 
