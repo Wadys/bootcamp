@@ -1,0 +1,48 @@
+<!-- Attribute Selectors Exercise
+Instructions:
+1. Use the provided HTML structure. 
+2. Apply styles to elements according to the following detailed descriptions:
+    -Change the border color of all input fields.
+    -Specifically, make the border of text input fields green.
+    -Highlight any element with a class that includes "highlight" by setting its background to yellow.
+    -Ensure that any link that starts with "https" has a bold font style.
+    -Style links that contain the word "example" in their URL by underlining them.
+    -For elements that have a language attribute starting with "en" (like "en" or "en-US"), set their color to blue.
+Learning Objectives:
+Learn to apply CSS attribute selectors to style HTML elements based on their attributes. This exercise focuses on 
+different ways to select elements with specific attribute conditions. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Attribute Selectors Exercise</title>
+    <style>
+        input[type]{
+            border: solid black;
+        }
+        input[type = "text"]{
+            border: solid green;
+        }
+        [class~="highlight"]{
+            background-color: yellow;
+        }
+        a[href^=https]{
+            font-weight: bold;
+        }
+        [href~=example]{
+            text-decoration: underline;
+        }
+        [lang|=en]{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Text input">
+    <input type="password" placeholder="Password input">
+    <p class="text highlight">This paragraph is highlighted.</p>
+    <a href="https://example.com">Visit HTTPS Example</a>
+    <a href="http://example.net">Visit HTTP Example</a>
+    <p lang="en-US">This paragraph is in English (US).</p>
+</body>
+</html>
