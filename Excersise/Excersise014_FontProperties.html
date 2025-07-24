@@ -1,11 +1,14 @@
 <!-- Font Properties Exercise
 Instructions:
 1. Use the provided HTML structure.
-2. Apply styles to elements according to the following detailed descriptions:
+2. Apply styles to elements according to the following detailed 
+descriptions:
 -Set the font style of the <h3> to italic.
 -Make the text in the <h1> bold.
--Apply the shorthand font property to the list items, making the text italic, using small-caps, 
-setting the weight to bold, the size to 1.5 rem, and the font family to Arial with a fallback of sans-serif.
+-Apply the shorthand font property to the list items, making the text 
+italic, using small-caps, 
+setting the weight to bold, the size to 1.5 rem, and the font family 
+to Arial with a fallback of sans-serif.
 Learning Objectives
 Master the use of CSS font properties to style text in HTML elements, including different styles, 
 weights, and comprehensive shorthand notation for setting font styles. -->
@@ -15,7 +18,15 @@ weights, and comprehensive shorthand notation for setting font styles. -->
     <meta charset="UTF-8">
     <title>CSS Font Properties Exercise</title>
     <style>
-        /* Styles will be added here */
+        h3{
+            font-style: italic;
+        }
+        h1{
+            font-weight: bold;
+        }
+        li{
+             font: italic small-caps bold 1.5rem Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
