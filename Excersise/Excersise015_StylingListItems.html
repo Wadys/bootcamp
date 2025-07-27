@@ -1,0 +1,61 @@
+<!-- 
+Instructions:
+1. Use the provided HTML structure with lists having unique class names.
+2. Style each list according to the descriptions:
+-For the list with class disc-list, set the list item marker to a disc.
+-For the list with class circle-list, set the list item marker to a circle.
+-For the list with class inside-list, set the list style position to inside.
+-For the list with class square-list, use the shorthand property to set the list 
+style to square markers positioned outside.
+Use class selectors to apply styles and may need to use combinator selectors to 
+select list items within these lists.
+
+Learning objective:
+Learn how to style unordered and ordered lists using various CSS list properties 
+such as list-style-type, list-style-position, and shorthand list-style. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Styling Exercise</title>
+    <style>
+        .disc-list{
+        list-style-type: disc;
+        }
+        .circle-list{
+        list-style-type: circle; /* Circle marker */
+        }
+        .inside-list{
+        list-style-position: inside; /* Marker inside the content */
+        }
+        .square-list{
+        list-style-type: square; /* Square marker */
+        }
+    </style>
+</head>
+<body>
+    <ul class="disc-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <ul class="circle-list">
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+    <ol class="inside-list">
+        <li>Step One</li>
+        <li>Step Two</li>
+        <li>Step Three</li>
+    </ol>
+    <ul class="square-list">
+        <li>Option X</li>
+        <li>Option Y</li>
+        <li>Option Z</li>
+    </ul>
+</body>
+<footer>
+    <a href="/index.html">Home</a>
+</footer>
+</html>
