@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+        <title>CSS Box Model Demonstration</title>
+        <style>
+            body {
+            background-color: lightyellow;
+            }
+            /* Styling the box model */
+            .box-model {
+            text-align: center;
+            width: 300px; /* Content width */
+            padding: 20px; /* Padding inside the box */
+            border: 5px solid black; /* Border around the box */
+            margin: 30px; /* Margin outside the box */
+            background-color: lightblue; /* Content background color */
+            }
+
+            .different-properties {
+            text-align: center;
+            width: 300px; /* Content width */
+            padding-left: 20px;
+            padding-right: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border-left: 10px solid red;
+            border-right: 5px solid black;
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
+            margin: auto; /* Even if we resize the window auto will calculate  */
+            background-color: lightblue; /* Content background color */
+            }
+            
+            .shorthand {
+            text-align: center;
+            width: 300px; /* Content width */
+            padding: 20px 40px 40px 40px; /* TRBL */
+            border-width: 5px 1em 1rem 20px; /* Top, Right, Bottom, Left */
+            border-style: solid dashed dotted double;
+            border-color: red green blue black;
+            /* margin: 30px auto 50px auto; TRBL combininig shorthands */
+            margin: 30px 50px 20px; /* combininig 2 shorthands */
+            background-color: lightblue; /* Content background color */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- The total width of the element in dev tools is 350px  -->
+        <div class="box-model">Content Inside The Box</div>
+        <div class="different-properties">Content Inside The Box</div>
+        <div class="shorthand">Content Inside The Box</div>
+    </body>
+    <footer>
+        <a href="/index.html">Home</a>
+    </footer>
+</html>

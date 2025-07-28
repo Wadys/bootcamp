@@ -1,0 +1,51 @@
+<!-- 
+Instructions:
+1. Use the provided HTML structure which includes multiple elements.
+2. Define CSS variables at the root level for colors, font sizes, and padding.
+3. Apply these variables to style the elements accordingly:
+-Set a variable for the primary color and use it for the text color of headings
+and the background color of buttons. Color should be blue
+-Set a variable for font size 16px and use it for the text of paragraphs and labels.
+-Set a variable for padding padding:10px 20px; and use it within button styles.
+
+Learning Objective:
+Learn to create and apply CSS variables to manage styles efficiently. Students 
+will define variables for common style properties and use these variables to 
+style multiple elements consistently. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables Exercise</title>
+    <style>
+        :root {
+        --main-color: #0000ff;
+        --font-size: 16px;
+        --padding: 10px 20px;
+        }
+        h1{
+            color: var(--main-color);
+        }
+        button{
+            background-color: var(--main-color);
+            padding: var(--padding);
+            border: none;
+            color: white;
+            cursor: pointer;
+
+        }
+        p, label{
+            font-size: var(--font-size);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Site</h1>
+    <p>This is an example paragraph to demonstrate font size using CSS variables.</p>
+    <label>Subscribe to our newsletter</label>
+    <button>Click Me</button>
+</body>
+<footer>
+    <a href="/index.html">Home</a>
+</footer>
+</html>

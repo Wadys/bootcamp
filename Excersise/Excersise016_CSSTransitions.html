@@ -1,0 +1,43 @@
+<!-- 
+Instructions:
+1. Use the provided HTML structure with a div element.
+2. Apply CSS to ensure that when the div is hovered over, its background color 
+changes from blue to red. Specifically, configure the transition for the background
+color with the following settings:
+-Transition Property: Ensure the transition only affects the background color.
+-Transition Duration: Set the transition to last exactly 2 seconds.
+-Transition Delay: Include a delay of 0.5 seconds before the transition starts.
+-Transition Timing Function: Use an 'ease-in-out' timing function to control the 
+acceleration curve of the transition.
+
+Learning Objective:
+Learn to apply CSS transitions to enhance the interactivity and visual feedback 
+of web elements. Students will use transition properties to animate changes in 
+a div when it is hovered over. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transition Exercise</title>
+    <style>
+        .transition-box{
+            background-color: blue;
+            width: 110px;
+            height: 20px;
+            transition-property: background-color;
+            transition-timing-function: ease-in-out;
+            transition-duration: 2s;
+            transition-delay: 0.5s;
+        }
+        .transition-box:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="transition-box">Hover over me!</div>
+</body>
+<footer>
+    <a href="/index.html">Home</a>
+</footer>
+</html>
