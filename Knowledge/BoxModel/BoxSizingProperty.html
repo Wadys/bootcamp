@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Box-Sizing Property Demonstration</title>
+        <style>
+            /* General styles for containers */
+            body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            }
+
+            .container {
+            background-color: lightgray;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid black;
+            }
+
+            /* Styling for all boxes */
+            .box {
+            width: 300px;
+            padding: 20px;
+            border: 10px solid darkblue;
+            background-color: lightblue;
+            margin-bottom: 20px;
+            }
+
+            /* Default box-sizing: content-box (default behavior) */
+            .content-box {
+            box-sizing: content-box; /* Paddin+Boder+Padding = 300px vs 360px(see .box) */
+            }
+
+            /* box-sizing: border-box */
+            .border-box {
+            box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Box-Sizing Property Demonstration</h1>
+
+        <!-- All calculations can be checked with inpect element -->
+
+        <!-- Content-box example -->
+        <section class="container">
+            <h2>Content-Box (Default)</h2>
+            <div class="box content-box">box-sizing: content-box;</div>
+            <p>
+            With <strong>box-sizing: content-box</strong>, the width is applied only
+            to the content. The padding and border are added outside of the width,
+            increasing the total size of the element.
+            </p>
+            <p>
+            For example, the width is set to 300px, but the actual size is 300px
+            (content) + 20px (padding on both sides) + 10px (border on both sides) =
+            360px.
+            </p>
+        </section>
+
+        <!-- Border-box example -->
+        <section class="container">
+            <h2>Border-Box</h2>
+            <div class="box border-box">box-sizing: border-box;</div>
+            <p>
+            With <strong>box-sizing: border-box</strong>, the width includes the
+            content, padding, and border. The total width remains 300px, as padding
+            and border are part of the width calculation.
+            </p>
+            <p>
+            The content's available space is reduced accordingly, but the total size
+            is exactly 300px.
+            </p>
+        </section>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>

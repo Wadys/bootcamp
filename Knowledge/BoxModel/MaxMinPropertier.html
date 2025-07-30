@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS Max/Min Width and Height Demonstration</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <h1>CSS Max-Width, Min-Width, Max-Height, and Min-Height Demonstration</h1>
+
+        <!-- Min-Width Example -->
+        <section class="container">
+            <h2>Min-Width Example</h2>
+            <div class="box min-width-box">
+            This box has <strong>min-width: 300px</strong>. It will never shrink
+            below 300px, even if the screen is smaller.
+            </div>
+            <p>
+            Explanation: The <strong>min-width</strong> property ensures that the
+            box will not shrink below 300px even when the container or window size
+            is reduced. It's useful for keeping a minimum size for important
+            content.
+            </p>
+        </section>
+
+        <!-- Max-Width Example -->
+        <section class="container">
+            <h2>Max-Width Example</h2>
+            <div class="box max-width-box">
+            This box has <strong>max-width: 400px</strong>. It won't expand beyond
+            400px, even if the screen is larger.
+            </div>
+            <p>
+            Explanation: The <strong>max-width</strong> property limits the width of
+            the box to 400px, even if the available space is larger. It’s helpful
+            for preventing elements from becoming too wide on large screens.
+            </p>
+        </section>
+
+        <!-- Min-Height Example -->
+        <section class="container">
+            <h2>Min-Height Example</h2>
+            <div class="box min-height-box">
+            This box has <strong>min-height: 150px</strong>. It will not shrink
+            below 150px, even if there's not enough content.
+            </div>
+            <p>
+            Explanation: The <strong>min-height</strong> property ensures the box
+            maintains a minimum height of 150px, regardless of the content inside.
+            It’s useful to avoid content "squishing" into small spaces.
+            </p>
+        </section>
+
+        <!-- Max-Height Example -->
+        <section class="container">
+            <h2>Max-Height Example</h2>
+            <div class="box max-height-box">
+            This box has <strong>max-height: 200px</strong>. If the content
+            overflows, you can scroll within the box. <br /><br />
+            This extra content is here to demonstrate the scrolling behavior when
+            the content exceeds the maximum height.
+            </div>
+            <p>
+            Explanation: The <strong>max-height</strong> property limits the box's
+            height to 200px. Any content that exceeds this height will be clipped,
+            and you can add <strong>overflow: auto</strong> to make it scrollable.
+            </p>
+        </section>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>
