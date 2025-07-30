@@ -1,0 +1,93 @@
+<!-- Instructions:
+1. Use the provided HTML structure which includes two main div containers, each 
+containing a child div. Each pair will demonstrate different z-index scenarios.
+2. Write all styles specific to this exercise in the style.css file.
+3. A separate basic.css file will contain basic styling for sizes and background 
+colors, which should not be modified for exercise evaluation purposes.
+4. Apply positioning and z-index properties:
+-Parent Div (parent-low) with a Child Div (child-high):
+ -Set the parent's position to relative and z-index to 1.
+ -Position the child absolutely relative to the parent and set its z-index higher
+ than the parent (e.g., 2) to make it appear above the parent.
+-Parent Div (parent-high) with a Child Div (child-low):
+- Set the parent's position to relative and z-index to 1.
+ -Position both the child div's absolutely relative to the parent and set its
+ z-index  of child-low to 2 and child-low-2 to 1 such that Child Low 1 appears
+ to be on top of Child Low 2
+
+Learning Objective:
+Learn to control the stacking order of positioned elements using the z-index 
+property. Students will adjust the z-index of nested elements to either show
+an element above or below its parent. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS z-index Exercise</title>
+        <link rel="stylesheet" href="basic.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            }
+
+            .parent-low, .parent-high {
+            background-color: blue;
+            }
+
+            .child-high, .child-low {
+            background-color: red;
+            }
+
+            .child-low{
+            top:60px;
+            left: 60px;
+            }
+            .child-low-2 {
+            background-color: green;        
+            }
+            .parent-low{
+                position: relative;
+                z-index: 1;
+            }
+            .child-high{
+                position: absolute;
+                z-index: 2;
+            }
+            .parent-high{
+                position: relative;
+                z-index: 1;
+            }
+            .child-low{
+                position: absolute;
+                z-index: 2;
+            }
+            .child-low-2{
+                position: absolute;
+                z-index: 3;
+            }
+
+/* Do not modify this file for the exercise */
+
+        </style>
+    </head>
+    <body>
+        <div class="parent-low">
+            Parent Low
+            <div class="child-high">Child High</div>
+        </div>
+        <div class="parent-high">
+            Parent High
+            <div class="child-low">Child Low 1</div>
+            <div class="child-low-2">Child Low 2</div>
+        </div>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>
