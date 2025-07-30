@@ -1,0 +1,68 @@
+<!-- Instructions:
+1. Use the provided HTML structure which includes four div elements, each assigned
+a unique class corresponding to the positioning technique to be applied.
+2. Write all styles specific to this exercise in the style.css file.
+3. A separate basic.css file will be used for basic styling (like width, height,
+background colors, etc.), which should not be modified.
+4. Apply the following position properties to each div using the style.css:
+-Relative Div (relative-div): Set position to relative and move it 20px down and
+20px to the right from its normal position.
+-Absolute Div (absolute-div): Set position to absolute and position it 30px from
+the top and 30px from the right of its closest positioned ancestor.
+-Fixed Div (fixed-div): Set position to fixed and anchor it 10px from the bottom
+and 10px from the left of the viewport.
+-Sticky Div (sticky-div): Set position to sticky and specify it to stick 0px from
+the top of the viewport when you scroll.
+
+Learning Objective:
+Learn to apply and distinguish between various CSS positioning properties to control
+the layout of elements relative to their normal flow, containing block, viewport, or the nearest scrolling ancestor -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Positioning Exercise</title>
+        <link rel="stylesheet" href="basic.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                margin: 10px;
+                padding: 10px;
+                background-color: lightgray;
+                color: black;
+                text-align: center;
+            }
+            .relative-div{
+            position: relative;
+            top: 20px;
+            right: 20px;
+            }
+            .absolute-div{
+            position: absolute;
+                top: 30px;
+                right: 30px;
+            }
+            .fixed-div{
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            }
+            .sticky-div{
+            position: sticky;
+            top: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="relative-div">Relative Positioning</div>
+        <div class="absolute-div">Absolute Positioning</div>
+        <div class="fixed-div">Fixed Positioning</div>
+        <div class="sticky-div">Sticky Positioning</div>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>
