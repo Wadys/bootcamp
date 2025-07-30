@@ -1,0 +1,53 @@
+<!-- Instructions:
+1. Use the provided HTML structure with two div elements, each with a unique class.
+2. Write all your CSS in the style.css file.
+3. Style each div based on its class:
+-Rounded Div (rounded-div):
+    -Apply a specific border radius to each corner of the div:
+        -border-top-left-radius of 20px.
+        -border-top-right-radius of 30px.
+        -border-bottom-right-radius of 40px.
+        -border-bottom-left-radius of 50px.
+    -Set a width and height of 200px for each div.
+    -Apply a blue background color.
+-Shorthand Rounded Div (shorthand-rounded-div):
+    -Use the shorthand border-radius property to set all corners to 25px.
+    -Set a width and height of 200px.
+    -Apply a green background color.
+Learning Objective:
+Learn to manipulate the border-radius property to create visually appealing rounded
+corners on elements. Students will apply specific radius values to each corner of a
+box and use the shorthand notati -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border Radius Exercise</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .rounded-div{
+            width: 200px;
+            height: 200px;;
+            background-color: blue;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 50px;
+        }
+        .shorthand-rounded-div{
+            width: 200px;
+            height: 200px;;
+            background-color: green;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rounded-div">Custom Rounded Corners</div>
+    <div class="shorthand-rounded-div">Uniform Rounded Corners</div>
+</body>
+<footer>
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
