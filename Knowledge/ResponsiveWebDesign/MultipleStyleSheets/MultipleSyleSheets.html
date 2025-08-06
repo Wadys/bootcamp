@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- The <meta name="viewport" content="width=device-width, initial-scale=1.0" /> tag is essential for making a website responsive on mobile devices. It sets the viewport's width to the device's screen width and the initial zoom level to 1.0. Without it, a website may not scale correctly on smaller screens, causing users to zoom or scroll horizontally. This tag ensures proper scaling and readability on mobile devices, providing an optimized user experience. It helps control the layout across different screen sizes and makes sure the website adapts well, especially in responsive web design. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries with Separate Files</title>
+    <link href="default-style.css" rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        media="screen and (max-width: 480px)"
+    href="mobile.style.css"
+    />
+    <link
+        rel="stylesheet"
+        media="screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait)"
+        href="tablet-portrait.css"
+    />
+    <link
+        rel="stylesheet"
+        media="screen and (min-width: 481px) and (max-width: 1024px) and (orientation: landscape)"
+        href="tablet-landscape.css"
+    />
+    <link
+        rel="stylesheet"
+        media="screen and (min-width: 1025px)"
+        href="desktop-tyle.css"
+/>
+</head>
+    <body>
+        <h1>Responsive with Media Queries</h1>
+        <div class="box">
+            <p>This is a responsive box.</p>
+        </div>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>

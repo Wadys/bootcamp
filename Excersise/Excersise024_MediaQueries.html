@@ -1,0 +1,69 @@
+<!-- 
+Instructions:
+1. Use the provided HTML structure which includes a div element with a class of 
+responsive-box.
+2. Write all your CSS in the style.css file.
+3. Define media queries to adjust the background color of the div based on the 
+following viewport conditions:
+-Mobile Devices: For screens narrower than 480px, set the background color to 
+light blue.
+-Tablets in Portrait Mode: For screens between 481px and 1024px with portrait
+orientation, set the background color to light green.
+-Tablets in Landscape Mode: For screens between 481px and 1024px with landscape
+orientation, set the background color to light pink.
+-Desktops and Larger Screens: For screens wider than 1025px, set the background 
+color to light gray.
+
+Due to the nature of media queries and responsive design, visual confirmation 
+is the primary method for testing this exercise. Students should manually resize 
+their browser windows to see the background color of the .responsive-box change
+according to the different viewport conditions specified.
+
+Note for Students:
+This exercise does not lend itself to automated testing due to its reliance on 
+visual checks and dynamic browser behavior. You are encouraged to actively test
+the responsiveness by resizing your browser to verify that the appropriate 
+styles are applied under each condition specified in the media queries.
+
+Learning Objective:
+Learn to apply media queries to adjust styles based on different viewport 
+conditions, such as screen widths and orientations. Students will define CSS 
+rules within specific media queries to demonstrat -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Media Queries Exercise</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @media (max-width: 480px) {
+                div{ 
+                background-color: lightblue;
+                }
+            }
+            @media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+                div {
+                background-color: lightgreen;
+                }
+            }
+            @media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+                div {
+                background-color: lightpink;
+                }
+            }
+            @media (min-width: 1025px) {
+                div {
+                    background-color: lightslategrey;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="responsive-box">Resize your browser to see color changes.</div>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+
+    </html>

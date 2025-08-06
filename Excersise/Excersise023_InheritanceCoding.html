@@ -1,0 +1,80 @@
+<!--
+Instructions:
+1. Use the provided HTML structure which includes several div elements, each 
+assigned unique classes and IDs to explore different CSS concepts.
+2. Write all exercise-specific styles in the style.css file.
+3. Use the basic.css file for general styling, which should not be modified for
+exercise evaluation purposes.
+4. Perform the following tasks:
+TODO 1: Demonstrate Source Order
+-Apply two different colors to elements with the class .source-order. Ensure 
+that the color applied later in the stylesheet is displayed.
+TODO 2: Demonstrate Specificity
+-Style a paragraph with class .specificity and ID #specificity-example using 
+element, class, and ID selectors to show how specificity impacts style application.
+TODO 3: Using the !important Flag
+-Style elements with class .important-flag with two colors, using !important on
+one to ensure it overrides the other.
+TODO 4: Combined Cascade Algorithm
+-Show how source order, specificity, and !important interact by applying conflicting
+styles to elements with class .cascade-example and ID #cascade-example.
+
+Important Note on Testing: 
+Due to the nature of this exercise, which involves visually confirming the effects 
+of CSS properties like specificity, source order, and the !important flag, automated 
+testing is not feasible. These CSS concepts require manual inspection to ensure that
+they are applied and interact as expected. You should visually check each part of the 
+exercise to verify the correct application of styles. This approach will help you
+develop a practical understanding of how CSS rules are interpreted and applied by
+browsers, which is crucial for effective web design and development.
+
+Learning objective:
+Learn and demonstrate the effects of source order, specificity, !important, and the
+CSS cascade algorithm on style application. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Cascade and Specificity Exercise</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        }
+        .source-order{
+        color: blue;
+        color: red;
+        }
+        p{
+        background-color: blueviolet;
+        }
+        .specificity{
+        color: goldenrod;
+        }
+        #specificity-example{
+        border: solid 3px brown;     
+        }
+        .important-flag{
+        color: blue !important;
+        color: red;
+        }
+        .cascade-example{
+        color: blue
+        } 
+        #cascade-example{
+        color: red;
+        color: greenyellow !important;        
+        }
+    </style>
+</head>
+<body>
+    <div class="source-order">Source Order Example</div>
+    <p class="specificity" id="specificity-example">Specificity Example</p>
+    <div class="important-flag">Important Flag Example</div>
+    <p class="cascade-example" id="cascade-example">Cascade Algorithm Example</p>
+</body>
+<footer>
+        <br><a href="/index.html">Home</a>
+</footer>
+</html>

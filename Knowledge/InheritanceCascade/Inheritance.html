@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Inheritance Lecture</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            color: darkblue;
+            text-align: center;
+            }
+
+            /* Basic Inheritance */
+            .parent-text {
+            font-size: 18px;
+            }
+
+            .child-text {
+            color: darkred; /* Overrides color */
+            }
+
+            /* Non-Inherited Properties */
+            .non-inherited {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: lightgray;
+            }
+
+            .child-box {
+            width: 100px;
+            padding: 5px;
+            border: 2px solid blue;
+            background-color: lightyellow;
+            }
+
+            /* Advanced Inheritance: Overriding Parent Styles */
+            .parent-container {
+            font-size: 20px;
+            line-height: 1.5;
+            color: darkgreen;
+            padding: 10px;
+            border: 2px solid green;
+            }
+
+            .child-container {
+            font-size: 16px; /* Overrides font-size */
+            padding: 5px;
+            border: 2px solid red;
+            background-color: lightpink;
+            }
+
+            /* Multiple Levels of Inheritance */
+            .outer-box {
+            color: navy;
+            padding: 15px;
+            border: 2px solid navy;
+            background-color: lightblue;
+            }
+
+            .middle-box {
+            padding: 10px;
+            border: 2px solid darkblue;
+            background-color: lightgray;
+            font-size: 18px; /* Overrides font-size */
+            }
+
+            .inner-box {
+            padding: 5px;
+            border: 2px solid blue;
+            background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Inheritance Lecture</h1>
+
+        <!-- Basic Inheritance Example -->
+        <section>
+            <h2>Basic Inheritance</h2>
+            <p class="parent-text">Inherited from the parent.</p>
+            <p class="child-text">
+            Color is overridden, but other styles are inherited.
+            </p>
+        </section>
+
+        <!-- Non-inherited Properties -->
+        <section>
+            <h2>Non-Inherited Properties</h2>
+            <div class="non-inherited">
+            <p>Width and padding are not inherited.</p>
+            <div class="child-box">
+                <p>Child box has its own width and padding.</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- Advanced Inheritance: Overriding Parent Styles -->
+        <section>
+            <h2>Advanced Inheritance: Overriding Parent Styles</h2>
+            <div class="parent-container">
+            <p>Font size, color, and line-height are inherited.</p>
+            <div class="child-container">
+                <p>Font size is overridden, color and line-height are inherited.</p>
+            </div>
+            </div>
+        </section>
+
+        <!-- Inheriting properties across multiple levels -->
+        <section>
+            <h2>Multiple Levels of Inheritance</h2>
+            <div class="outer-box">
+            <p>Outer box styles inherited.</p>
+            <div class="middle-box">
+                <p>Middle box overrides some styles.</p>
+                <div class="inner-box">
+                <p>Inner box inherits styles from both parents.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>
