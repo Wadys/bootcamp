@@ -1,0 +1,78 @@
+<!--Instructions:
+1. Create a Form:
+-Use the provided HTML structure to create a form with an id of 
+"registration-form". This form should contain several types of inputs and a 
+submission button.
+2. Add Input Elements with Labels:
+-Include the following input elements with labels in the form:
+ -Text input for "Username" (type="text").
+ -Password input for "Password" (type="password").
+ -URL input for "Website URL" (type="url").
+ -Email input for "Email Address" (type="email").
+ -Telephone input for "Telephone" (type="tel").
+3. Apply Detailed Styles in style.css:
+-Style the input elements (type="text", type="password", type="url", 
+type="email", type="tel") to:
+ -Display: block
+ -Width: 200px
+ -Padding: 8px
+ -Margin: 10px 0
+-Style the submission button to:
+ -Padding: 10px 20px
+ -Background Color: #007BFF
+ -Text Color: white
+ -Border: none
+ -Cursor: pointer
+ -Transition: background-color 0.3s ease
+-Add a hover effect to the button that changes the background color to #0056b3.
+4. Form Submission Button:
+-Include a submit button at the end of the form with text "Register".
+Learning Objective:
+Learn to create an HTML form using various types of input fields, each 
+configured to accept specific types of data based on the type attribute.
+Understand how to apply HTML validation for these input -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Input Types and Button Styling Exercise</title>
+    <style>
+        input{
+            background-color: #ccc;
+            display: block;
+            width: 200px;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form id="registration-form">
+        <label for="username">User Name:</label>
+        <input id="username" type="text">
+        <label for="password">Password:</label>
+        <input id="password" type="password">
+        <label for="website">Website:</label>
+        <input id="website" type="url">
+        <label for="email">E-Mail:</label>
+        <input id="email" type="email">
+        <label for="phone">Phone Number:</label>
+        <input id="phone" type="tel">
+        <button type="button">Submission</button>
+    </form>
+</body>
+<footer>
+        <br><a href="/index.html">Home</a>
+</footer>
+</html>
