@@ -1,0 +1,100 @@
+<!-- 
+Instructions:
+1. Create a Form:
+-Use the provided HTML structure to create a form with an id of "selection-form". 
+This form will include groups of radio buttons and checkboxes for user input.
+2. Add Radio Buttons and Checkboxes:
+-Include a group of radio buttons for a user to select one option from a set, 
+such as choosing a preferred contact method.
+-Include a group of checkboxes for a user to select multiple options, such as 
+choosing interests.
+3. Label Groups and Options:
+-Each group of radio buttons or checkboxes should be accompanied by a descriptive
+label explaining the choice.
+-Each individual option should also have a label for better accessibility.
+4. Apply Styles in style.css:
+-Style the radio buttons and checkboxes to enhance visual interaction and ensure
+they are easily clickable.
+-Use CSS to create a cohesive look that matches the form's design, possibly 
+customizing the appearance of the selection controls.
+Learning Objective:
+Learn to create, configure, and style radio buttons and checkboxes within an HTML form. 
+This exercise emphasizes the correct use of these input types for options that require
+selection and how to styl-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Radio Buttons and Checkboxes Exercise</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            *{
+                margin-right: 8px;
+                font-family: sans-serif;
+            }
+            form{
+                width: 350px;
+                padding: 10px;
+                border-radius: 6px;
+                border: 1px solid black;
+                background-color: #ccc;
+            }
+            input{
+            /* margin-right: 8px; */
+            }
+            h2{
+                margin-bottom: 5px;
+            }
+            label{
+                display: block;
+                margin-bottom: 10px;
+            }
+            button{
+                margin-left: 35%;
+                padding: 10px 20px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+            button:hover{
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="selection-form">
+            <h2>Prefered Contact Method:</h2>
+            <label for="email">
+            <input type="radio" id="email" name="contactmethod" value="email" />
+            E-mail</label>
+            <label for="phone">
+            <input type="radio" id="phone" name="contactmethod" value="phone" />
+            Telephone</label>
+            <label for="cel-phone">
+            <input type="radio" id="cel-phone" name="contactmethod" value="cel-phone" />
+            Celphone</label>
+            <label for="whatsapp">
+            <input type="radio" id="whatsapp" name="contactmethod" value="whatsapp" />
+            WhatsApp</label>
+            <h2>Chossing Interests:</h2>
+            <label for="sports">
+            <input type="checkbox" name="Interests" id="sports" value="sports"/>
+            Playing team or individual sports</label>
+            <label for="painting">            
+            <input type="checkbox" name="Interests" id="painting" value="painting"/>
+            Painting, drawing, or sculpting</label>
+            <label for="meditation">
+            <input type="checkbox" name="Interests" id="meditation" value="meditation"/>
+            Yoga and meditation</label>
+            <label for="volunteering">
+            <input type="checkbox" name="Interests" id="volunteering" value="volunteering"/>
+            Volunteering or community servicen</label>
+            <button type="button">Submit</button>
+        </form>    
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>
