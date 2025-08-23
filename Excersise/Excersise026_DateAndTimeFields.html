@@ -1,0 +1,97 @@
+<!--
+Instructions:
+1. Create a Form:
+-Use the provided HTML structure to create a form with an id of 
+"data-entry-form". This form should include input fields for number, date, 
+month, time, and color data types.
+2. Add and Label Input Elements:
+-Include the following input elements in the form, each with an appropriate 
+label:
+ -Number Input for entering quantities (type="number").
+ -Date Input for selecting a date (type="date").
+ -Month Input for selecting a month (type="month").
+ -Time Input for specifying a time (type="time").
+ -Color Input for choosing a color (type="color").
+3. Apply Detailed Styles in style.css:
+-Uniform Appearance for Inputs:
+ -Ensure all input elements are styled to have a uniform appearance by setting:
+  -Width: 100% to fill the container.
+  -Padding: 8px for comfortable text entry.
+  -Margin Bottom: 10px to separate each input from the next.
+  -Display: Block to ensure each input takes a new line.
+-Button Styling:
+ -Style the form submission button with:
+  -Padding: 10px 20px for a better clickable area.
+  -Background Color: #007BFF for a distinct, attractive look.
+  -Text Color: White for contrast against the button background.
+  -Border: None for a clean, modern appearance.
+  -Cursor: Pointer to indicate the clickable nature.
+  -Transition: Background color changes over 0.3s for smooth visual feedback.
+ -Add a hover effect to the button to change the background color to #0056b3 
+ for visual interaction feedback.
+4. Form Submission Button:
+-Include a submit button at the end of the form with text "Submit".
+Learning Objective:
+Learn to implement and style various specialized input fields including number, 
+date, month, time, and color. This will help students understand how these 
+inputs are used in forms and how to ensure th -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Type Specialization Exercise</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="data-entry-form">
+        <label for="quantity">Quantity:</label>
+        <input id="quantity" type="number">
+        <label for="date">Date:</label>
+        <input id="date" type="date">
+        <label for="month">Month:</label>
+        <input id="month" type="month">
+        <label for="time">Time:</label>
+        <input id="time" type="time">
+        <label for="color">Color:</label>
+        <input id="color" type="color">
+        <button type="button">Submit</button>
+    </form>
+</body>
+<footer>
+        <br><a href="/index.html">Home</a>
+</footer>
+</html>
