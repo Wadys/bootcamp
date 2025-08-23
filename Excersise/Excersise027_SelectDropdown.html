@@ -1,0 +1,95 @@
+<!-- 
+Instructions:
+1. Create a Form:
+Use the provided HTML structure to create a form with an id of "dropdown-form".
+This form will include a select dropdown and a submission button.
+2. Add and Label Select Dropdown:
+Include a select element within the form with a corresponding label. Populate
+the dropdown with at least three options, ensuring there is a default 
+placeholder option prompting the user to make a selection.
+3. Apply Styles in style.css:
+-Form Container:
+ -Set margins to 20px.
+ -Add padding of 20px.
+ -Apply a border of 1px solid #ccc.
+-Labels:
+ -Display labels as block elements to ensure they appear on their own line.
+ -Set a bottom margin of 10px for spacing between the label and the dropdown.
+-Select Dropdown:
+ -Set the width to 100% to ensure it occupies the full container width.
+ -Apply padding of 8px for better text visibility and comfort.
+ -Add a bottom margin of 20px to separate the dropdown from subsequent content.
+ -Set the display to block for consistent positioning.
+ -Apply a border of 1px solid #ccc for visual structure.
+ -Ensure the background color is white for clarity.
+ -Set the cursor to pointer to indicate that the dropdown is interactive.
+-Submission Button:
+ -Style the button with a padding of 10px 20px for comfortable interaction.
+ -Use a background color of #007BFF for visual appeal and consistency with the 
+ form’s color scheme.
+ -Set the text color to white for contrast.
+ -Remove any border for a clean, modern look.
+ -Ensure the cursor is set to pointer to indicate clickability.
+ -Implement a color transition effect with background-color 0.3s ease to provide 
+ feedback when hovered.
+ -Change the button's background color on hover to #0056b3 to enhance user 
+ interaction.
+4. Form Submission Button:
+-Include a submit button at the end of the form with the text "Submit".
+Learning Objective:
+Learn to create and style select dropdown elements, ensuring they are 
+user-friendly and visually integrated into the form's overall design. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Dropdown Styling Exercise</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form{
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        select{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            display: block;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="dropdown-form" id="dropdown-form">
+        <label for="selectdropdown">Select Dropdown</label>
+        <select name="selectdropdown" id="selectdropdown">
+            <option>Select an option</option>
+            <option value="1">Option-1</option>
+            <option value="2">Option-2</option>
+            <option value="3">Option-3</option>
+        </select>
+        <button type="button">Submit</button>
+    </form>
+</body>
+<footer>
+        <br><a href="/index.html">Home</a>
+</footer>
+</html>
