@@ -1,0 +1,97 @@
+<!--
+Instructions:
+1. Create a Table:
+-Use the provided HTML structure to construct a table that includes a header (thead), a 
+body (tbody), and a footer (tfoot).
+2. Populate the Table:
+-Include at least three columns in your table, such as "Product Name", "Quantity", and 
+"Price".
+-Add multiple rows of data in the body section to represent different products.
+-Use the header to label each column clearly.
+-Summarize or provide additional information in the footer, such as the total price.
+3. Apply Styles in style.css:
+-Style the table to improve its aesthetics and readability:
+ -Set the width of the table to 100% to utilize the available space.
+ -Enhance the header and footer with distinct background colors and text styling.
+ -Ensure the body of the table is clearly readable with sufficient padding in cells.
+
+Learning Objective:
+Learn to properly construct an HTML table with header, footer, and body sections, and 
+apply CSS to enhance its readability and visual appeal. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Table Styling Exercise</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table{
+        width: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        border: 1px solid grey;
+        border-collapse: collapse
+        }
+        thead{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightblue;
+        }
+        td,th{
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 5 20px;
+        height: 30px;
+        }
+        tbody tr:nth-child(odd){
+        background-color: grey;
+        }
+        td:nth-child(1){
+            text-align: left;
+        } 
+        td:nth-child(3){
+            text-align: right;
+        }
+        tfoot{
+            background: lightgray;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Product name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Car</td>
+                <td>3</td>
+                <td>$300.00</td>
+            </tr>
+            <tr>
+                <td>Truck</td>
+                <td>2</td>
+                <td>$400.00</td>
+            </tr>
+            <tr>
+                <td>Bus</td>
+                <td>5</td>
+                <td>$500.00</td>
+            </tr>
+            <tr>
+                <td>Airplane</td>
+                <td>1</td>
+                <td>$900.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td>$1,600.00</td>
+            </tr>
+        </tfoot>
+    </table>    
+</body>
+</html>
