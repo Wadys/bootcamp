@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Vertical Headers</title>
+    <style>
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        caption{
+            margin-bottom: 50px;
+        }
+        td,th{
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
+        
+        .horizontal-header th{
+            background-color: #ddd
+        }
+        .vertical-header th:nth-child(1){
+            background-color: lightgoldenrodyellow;
+            width: 25%;
+        }
+        .combine-header th:nth-child(1){
+            background-color: lightgoldenrodyellow;
+            width: 25%;
+        }
+        .combine-header th{
+            background-color: #ddd;
+            width: 25%;
+        }
+
+        footer{
+            font-size: small;
+            padding: 10px 0px 0 0;
+            display: flex;
+            cursor: pointer;
+            justify-content: flex-start;
+        }
+        footer .wrapper{
+            width: 100%;
+            border-top: 1px solid #ddd;
+        }
+        footer a{
+            padding: 0 4px;
+            border-left: 1px solid #ddd;
+            text-decoration: none;
+            color: #3b3c4a;
+            transition: 0.5s ease;
+            font-weight: bold;
+        }
+        footer a:hover{
+            text-decoration: underline;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <table class="horizontal-header">
+        <caption>
+            My contact List
+        </caption>
+        <thead>
+            <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>E-mail</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>johndoe@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>janedoe@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Michael</td>
+                <td>Johnson</td>
+                <td>mjohnson@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="vertical-header">
+        <caption>Vertical Table Headers</caption>
+        <tbody>
+            <tr>
+                <th>Revenue</th>
+                <td>$80K</td>
+                <td>$85K</td>
+                <td>$90K</td>
+            </tr>
+            <tr>
+                <th>Expenses</th>
+                <td>$50K</td>
+                <td>$55K</td>
+                <td>$60K</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="combine-header">
+        <caption>Combine Table Headers</caption>
+        <thead>
+            <tr>
+                <th>Metrics</th>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Revenue</th>
+                <td>$80K</td>
+                <td>$85K</td>
+                <td>$90K</td>
+            </tr>
+            <tr>
+                <th>Expenses</th>
+                <td>$50K</td>
+                <td>$55K</td>
+                <td>$60K</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<footer>
+    <footer class="wrapper">
+        <br><a href="/index.html">Home</a>
+    </footer>
+</footer>
+</html>
