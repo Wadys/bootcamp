@@ -1,0 +1,77 @@
+<!-- 
+Instructions for Assignment Operators Exercise:
+Complete the following tasks using the appropriate JavaScript assignment 
+operators in the index.js file:
+1. Add and Assign (+=): Add 5 to a variable named a and assign the result to 
+the same variable.
+2. Subtract and Assign (-=): Subtract 5 from a variable named b and assign the
+result to the same variable.
+3.Multiply and Assign (*=): Multiply a variable named c by 2 and assign the
+result to the same variable.
+4. Divide and Assign (/=): Divide a variable named d by 2 and assign the result
+to the same variable.
+5. Modulus and Assign (%=): Apply modulus between a variable named e and 4 and
+assign the result to the same variable.
+6. Exponentiation and Assign (=)**: Raise a variable named f to the power of 3
+and assign the result to the same variable.
+
+Important: Do not edit the test.js file. It is used for preview purposes 
+because the JavaScript console is not available on Udemy. When you run your 
+code, all your code will be printed to the preview window.
+
+Learning Objective:
+Learn to use JavaScript's assignment operators (+=, -=, *=, /=, %=, **=) to 
+update variable values efficiently. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operators Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Assignment Operators Exercise</h1>
+    <div>
+        <p>Add and Assign (+=): <span id="outputAddAssign"></span></p>
+        <p>Subtract and Assign (-=): <span id="outputSubtractAssign"></span></p>
+        <p>Multiply and Assign (*=): <span id="outputMultiplyAssign"></span></p>
+        <p>Divide and Assign (/=): <span id="outputDivideAssign"></span></p>
+        <p>Modulus and Assign (%=): <span id="outputModulusAssign"></span></p>
+        <p>Exponentiation and Assign (**=): <span id="outputExponentiationAssign"></span></p>
+    </div>
+    <script> 
+        let a = 10;
+        let b = 20;
+        let c = 30;
+        let d = 40;
+        let e = 50;
+        let f = 2;
+        a += 5;
+        b -= 5;
+        c *= 2;
+        d /= 2;
+        e %= 4;
+        f **= 3;
+
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                document.getElementById(id).textContent = 'Error: ' + e.message;
+            }
+        }
+
+        // Display results
+        displayValue('outputAddAssign', a);
+        displayValue('outputSubtractAssign', b);
+        displayValue('outputMultiplyAssign', c);
+        displayValue('outputDivideAssign', d);
+        displayValue('outputModulusAssign', e);
+        displayValue('outputExponentiationAssign', f);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
