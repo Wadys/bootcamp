@@ -1,0 +1,83 @@
+<!-- 
+Instructions:
+-Complete the following tasks using the appropriate JavaScript arithmetic operators
+in the index.js file:
+
+1. Addition: Add two numbers and store the result in a variable named sum.
+2. Subtraction: Subtract one number from another and store the result in a 
+variable named difference.
+3. Multiplication: Multiply two numbers and store the result in a variable 
+named product.
+4. Division: Divide one number by another and store the result in a variable 
+named quotient.
+5. Modulus: Find the remainder of one number divided by another and store the 
+result in a variable named remainder.
+6. Exponential: Raise a number to the power of another number and store the 
+result in a variable named power.
+7. Increment: Increment a number and store the result in a variable named 
+number.
+8. Decrement: Decrement a number and store the result in a variable named 
+decrementNumber.
+Important: Do not edit the test.js file. It is used for preview purposes 
+because the JavaScript console is not available on Udemy. All your code will 
+be printed to the preview window when you run your code.
+
+Learning Objective:
+Learn and practice the use of various arithmetic operators in JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operators Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>Arithmetic Operators Exercise</h1>
+    <div>
+        <p>Sum (5 + 3): <span id="outputSum"></span></p>
+        <p>Difference (10 - 2): <span id="outputDifference"></span></p>
+        <p>Product (4 * 2): <span id="outputProduct"></span></p>
+        <p>Quotient (20 / 5): <span id="outputQuotient"></span></p>
+        <p>Remainder (28 % 10): <span id="outputRemainder"></span></p>
+        <p>Power (2 ^ 3): <span id="outputPower"></span></p>
+        <p>Increment (10++): <span id="outputIncrement"></span></p>
+        <p>Decrement (20--): <span id="outputDecrement"></span></p>
+    </div>
+    <script>
+        let sum = 5+3;
+        let product = 4*2;
+        let difference = 10-2;
+        var quotient = 20/5; 
+        var remainder = 28 % 10;
+        let base = 2;
+        var exponent = 3;
+        let power = base ** exponent;
+        let number = 10;
+        number++;
+        let decrementNumber = 20;
+        decrementNumber--;
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                document.getElementById(id).textContent = 'Error: ' + e.message;
+            }
+        }
+    // Display results
+        displayValue('outputSum', sum);
+        displayValue('outputDifference', difference);
+        displayValue('outputProduct', product);
+        displayValue('outputQuotient', quotient);
+        displayValue('outputRemainder', remainder);
+        displayValue('outputPower', power);
+        displayValue('outputIncrement', number);
+        displayValue('outputDecrement', decrementNumber);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
