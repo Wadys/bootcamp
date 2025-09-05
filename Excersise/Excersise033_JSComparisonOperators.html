@@ -1,0 +1,69 @@
+<!-- Instructions for Comparison Operators Exercise
+Complete the following tasks using the appropriate JavaScript comparison operators 
+in the index.js file. Assign each result to a designated variable:
+1. Equal (==): Compare two values 5 and "5" and assign the result to a variable named 
+isEqual.
+2. Strict Equal (===): Compare two values 5 and "5" and assign the result to a variable 
+named isStrictEqual.
+3. Not Equal (!=): Compare two values 5 and "5" and assign the result to a variable 
+named isNotEqual.
+4. Strict Not Equal (!==): Compare two values 5 and "5" and assign the result to a 
+variable named isStrictNotEqual.
+5. Greater Than (>): Compare two values 10 and 8 and assign the result to a variable 
+named isGreaterThan.
+6. Greater Than or Equal (>=): Compare two values 10 and 10 and assign the result to a 
+variable named isGreaterThanOrEqual.
+
+Important: Do not edit the test.js file. It is used for preview purposes because the 
+JavaScript console is not available on Udemy. All your code will be printed to the 
+preview window when you run your code.
+
+Learned Objectives:
+Explore and understand JavaScript's comparison operators by evaluating different 
+expressions and observing the outcomes for equality, inequality, and relational 
+comparisons. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Comparison Operators Exercise</h1>
+    <div>
+        <p>Equal (==): <span id="outputIsEqual"></span></p>
+        <p>Strict Equal (===): <span id="outputIsStrictEqual"></span></p>
+        <p>Not Equal (!=): <span id="outputIsNotEqual"></span></p>
+        <p>Strict Not Equal (!==): <span id="outputIsStrictNotEqual"></span></p>
+        <p>Greater Than (>): <span id="outputIsGreaterThan"></span></p>
+        <p>Greater Than or Equal (>=): <span id="outputIsGreaterThanOrEqual"></span></p>
+    </div>
+    <script>
+        let isEqual = 5 == '5';
+        let isStrictEqual = 5 === "5";
+        let isNotEqual = 5 != "5";
+        let isStrictNotEqual = 5 !== "5";
+        let isGreaterThan = 10 > 8;
+        let isGreaterThanOrEqual = 10 >= 10;
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.toString();
+            } catch (e) {
+                document.getElementById(id).textContent = 'Error: ' + e.message;
+            }
+        }
+        // Display results
+        displayValue('outputIsEqual', isEqual);
+        displayValue('outputIsStrictEqual', isStrictEqual);
+        displayValue('outputIsNotEqual', isNotEqual);
+        displayValue('outputIsStrictNotEqual', isStrictNotEqual);
+        displayValue('outputIsGreaterThan', isGreaterThan);
+        displayValue('outputIsGreaterThanOrEqual', isGreaterThanOrEqual);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
