@@ -1,0 +1,53 @@
+<!-- Instructions:
+Complete the following tasks using the appropriate JavaScript logical operators 
+in the index.js file. Assign each result to a designated variable:
+1. Logical AND (&&): Determine if two conditions are true (true and true) and 
+assign the result to a variable named andResult.
+2. OR (||): Evaluate two conditions (false and true) and determine the logical 
+OR outcome, assigning the result to a variable named orResult.
+Learning Objective:
+Understand and apply JavaScript's logical operators to manage multiple conditions 
+and default values effectively in programming scenarios. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Logical Operators Exercise</h1>
+    <div>
+        <p>Logical AND (&&): <span id="outputAndResult"></span></p>
+        <p>OR (||): <span id="outputOrResult"></span></p>
+    </div>
+    <script>
+        let andResult = 1 < 2 && 20 > "1"
+        let orResult = 1 > 2 || 20 > "1"
+        function displayValue(id, value) {
+            let displayText = ""; // Initialize display text
+            if (value === undefined) {
+                displayText = "undefined"; // Explicitly handle undefined
+            } else if (value === null) {
+                displayText = "null"; // Explicitly handle null
+            } else {
+                displayText = value.toString(); // Convert other values to string
+            }
+
+            try {
+                document.getElementById(id).textContent = displayText;
+            } catch (e) {
+                document.getElementById(id).textContent = 'Error: ' + e.message;
+            }
+        }
+        // Display results
+        displayValue('outputAndResult', andResult);
+        displayValue('outputOrResult', orResult);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
