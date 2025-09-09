@@ -1,0 +1,64 @@
+<!-- 
+Instructions:
+-Create an object named userInfo in the index.js file. Assign the following properties
+with specified primitive type values:
+1. name: Assign a string value "John Doe".
+2. age: Assign an integer value 30.
+3. isSubscriber: Assign a boolean value true.
+4. accountBalance: Assign a floating-point number 100.50.
+5. userId: Assign a string value that represents a numeric identifier "12345".
+-Ensure that each property is correctly assigned with the specified value type.
+Important: Do not edit the test.js file. It is used for preview purposes because
+the JavaScript console is not available on Udemy. All your code will be printed to
+the preview window when you run your code.
+Learning Objective: Practice creating objects in JavaScript by defining properties
+with specific primitive type values, enhancing your understanding of object 
+structures and data storage. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Object Creation Exercise</title>
+</head>
+<body>
+    <h1>Object Creation Exercise</h1>
+    <div>
+        <p>Name: <span id="outputName"></span></p>
+        <p>Age: <span id="outputAge"></span></p>
+        <p>Is Subscriber: <span id="outputIsSubscriber"></span></p>
+        <p>Account Balance: <span id="outputAccountBalance"></span></p>
+        <p>User ID: <span id="outputUserId"></span></p>
+    </div>
+    <script>
+        let userInfo = {
+            name : "John Doe",
+            age : 30,
+            isSubscriber : true,
+            accountBalance : 100.50,
+            userId : 12345,
+        }
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.toString();
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display object properties
+        try {
+            displayValue('outputName', userInfo.name);
+            displayValue('outputAge', userInfo.age);
+            displayValue('outputIsSubscriber', userInfo.isSubscriber);
+            displayValue('outputAccountBalance', userInfo.accountBalance);
+            displayValue('outputUserId', userInfo.userId);
+        } catch (error) {
+            console.error("Error in displaying properties: " + error.message);
+        }
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
