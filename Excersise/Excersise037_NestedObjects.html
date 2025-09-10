@@ -1,0 +1,67 @@
+<!--
+Instructions:
+-Create an object named userProfile with nested properties. Modify a nested 
+property and access the values to demonstrate understanding of nested object
+structures:
+1. Create Nested Object: Define an object userProfile with the following
+structure:
+-userId: "AB123"
+-personalInfo:
+--name: "Alice Johnson"
+--age: 28
+-contactDetails:
+--email: "alice@example.com"
+--phone: "123-456-7890"
+2. Modify a Nested Property: Increase the age property under personalInfo by 2.
+3. Access Nested Properties: Access and display the name and email from userProfile
+and print these values to console.
+Learning Objrvyive:
+Learn to create nested objects in JavaScript and understand how to access and
+manipulate their properties, enhancing your understanding of complex data structures.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Objects Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Nested Objects Exercise</h1>
+    <div>
+        <p>Name: <span id="outputName"></span></p>
+        <p>Email: <span id="outputEmail"></span></p>
+        <p>Updated Age: <span id="outputUpdatedAge"></span></p>
+    </div>
+    <script>
+        let userProfile = {
+            userID: "AB123",
+            personalInfo:{
+                name: "Alice Johnson",
+                age: 28,
+            },
+            contactDetails :{
+                email: "alice@example.com",
+                phone: "123-456-7890",
+            }
+        };
+        userProfile.personalInfo.age += 2;
+        console.log(userProfile.contactDetails.email);
+        console.log(userProfile.contactDetails.phone);
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.toString();
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        };
+// Display the name, email, and updated age
+        displayValue('outputName', userProfile.personalInfo.name);
+        displayValue('outputEmail', userProfile.contactDetails.email);
+        displayValue('outputUpdatedAge', userProfile.personalInfo.age);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
