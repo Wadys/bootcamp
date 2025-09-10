@@ -20,8 +20,14 @@
         };
         console.log("Original car object", car);
         let carCopy = car;
-        carCopy.color = "Red"
-        console.log("Modified carCopy object", carCopy)
+        carCopy.color = "Red";
+        console.log("Modified carCopy object", carCopy);
+        let newCar = {...car};
+        console.log("newCar", newCar);
+        newCar.color = "Blue";
+        console.log("newCar changed color", newCar);
+        console.log("Original car object", car);
+
     </script>
 </body>
 <footer class="wrapper">

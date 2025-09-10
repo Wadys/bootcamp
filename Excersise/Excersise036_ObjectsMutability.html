@@ -1,0 +1,53 @@
+<!-- Instructions:
+Create a clone of the given object using the spread operator, ensuring the new
+object does not reference the original. Modify a property in the cloned object
+to demonstrate that changes do not affect the original object:
+1. Clone the Object: Clone the provided originalObject using the spread operator 
+and assign it to a variable named clonedObject.
+2. Modify the Cloned Object: Change the age property of clonedObject to 35.
+IMPORTANT: Do not edit the test.js file. It is used for preview purposes because 
+the JavaScript console is not available on Udemy. All your code will be printed
+to the preview window when you run your code.
+Learning Objective:
+Learn to use the spread operator to clone objects in JavaScript, and understand
+how to manipulate the cloned object without affecting the original, highlighting
+object mutability. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutability and Spread Operator Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Mutability and Spread Operator Exercise</h1>
+    <div>
+        <p>Original Age: <span id="outputOriginalAge"></span></p>
+        <p>Cloned Age: <span id="outputClonedAge"></span></p>
+    </div>
+    <script>
+//Original object
+        const originalObject = {
+            name: "John Doe",
+            age: 30
+        };
+        let clonedObject = {...originalObject};
+        clonedObject.age = 35;
+        function displayValue(id, value){
+            try {
+                document.getElementById(id).textContent = value.toString();
+            }catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the ages to confirm they are different
+        displayValue('outputOriginalAge', originalObject.age);
+        displayValue('outputClonedAge', clonedObject.age);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
