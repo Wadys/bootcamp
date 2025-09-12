@@ -1,0 +1,59 @@
+<!-- 
+Instructions:
+Create an array named mixedArray that includes both primitive values and one
+nested object. Then, access specific values from the array to demonstrate your 
+understanding of array indexing and object manipulation:
+1. Create the Array: Define an array mixedArray with the following elements:
+-First element: a string "Hello"
+-Second element: a number 2023
+-Third element: a nested object {name: "John", age: 30}
+-Fourth element: a boolean true
+2. Access Array Elements:
+-Access and assign the string value to a variable called stringValue
+-Access and assign the age from the nested object to a variable called nestedAge
+Important: Do not edit the test.js file. It is used for preview purposes because
+the JavaScript console is not available on Udemy. All your code will be printed
+to the preview window when you run your code.
+Learning Objective:
+Learn to create and manipulate arrays containing both primitive values and a 
+nested object, and practice accessing elements to understand array indexing and 
+object property retrieval. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Array Manipulation Exercise</h1>
+    <div>
+        <p>String Value: <span id="outputStringValue"></span></p>
+        <p>Nested Object Age: <span id="outputNestedAge"></span></p>
+    </div>
+    <script>
+        mixedArray = [
+            "Hello",
+            2023,
+            {name: "John", age: 30},
+            true,
+        ];
+        let stringValue = mixedArray[0];
+        let nestedAge = mixedArray[2]["age"];
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.toString();
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the accessed values
+        displayValue('outputStringValue', stringValue);
+        displayValue('outputNestedAge', nestedAge);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
