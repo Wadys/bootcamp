@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Mutability</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Object Mutability</h1>
+    <h2>Open console!!!</h2>
+    <script>
+// This is another way(older) to create an object using New Object 
+        let car = {
+            brand: "BMW",
+            model: "7 Series",
+            color: "White",
+            make: 2024,
+            owner: "John",
+        };
+        console.log("Original car object", car);
+        let carCopy = car;
+        carCopy.color = "Red";
+        console.log("Modified carCopy object", carCopy);
+        let newCar = {...car};
+        console.log("newCar", newCar);
+        newCar.color = "Blue";
+        console.log("newCar changed color", newCar);
+        console.log("Original car object", car);
+
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

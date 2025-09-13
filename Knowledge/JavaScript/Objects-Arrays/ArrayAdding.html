@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracting from Arrays</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Array Adding</h1>
+    <h2>Open console!!!</h2>
+    <script>
+        let fruits = ["Apple", "Banana","Orange", "Mango"];
+        let numbers = new Array (10, 20, 30, 40, 50); //Creating an array using the new function    
+        console.log(fruits);
+        console.log(fruits[0]);
+        let newFruits = [...fruits];
+        fruits.push("Grapes");
+        console.log("New Fruits:",newFruits); //New fruits is not impacted 
+        // by the addition to original array
+        console.log("Fruits:",fruits);
+        fruits.pop(); //Removing last element
+        console.log("Fruits:",fruits);
+        fruits.pop(); //Again removing the last element
+        console.log("Fruits:",fruits);
+
+
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
