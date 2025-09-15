@@ -1,0 +1,60 @@
+<!--
+Instructions:
+Create a variable score and assign it a value. Based on the score, determine 
+the grade using if, else if, and else statements. Assign the grade to a variable 
+named grade and display it:
+-If the score is 90 or above, the grade should be "A".
+-Else if the score is between 80 and 89, the grade should be "B".
+-Else if the score is between 70 and 79, the grade should be "C".
+-Else if the score is between 60 and 69, the grade should be "D".
+-Else, the grade should be "F".
+Important: 
+Do not edit the test.js file. It is used for preview purposes because the JavaScript
+console is not available on Udemy. All your code will be printed to the 
+preview window when you run your code.
+
+Learn to apply conditional logic effectively using if, else if, and else statements 
+to handle multiple decision paths in JavaScript.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Conditional Statements Exercise</h1>
+    <div>
+        <p>Grade for the score: <span id="outputGrade"></span></p>
+    </div>
+    <script>
+        let score = 90;
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+        let grade = null;
+        if (score >= 90){
+            grade = "A";
+        }else if(score >= 80){
+            grade = "B";
+        }else if(score >= 70){
+            grade = "C";
+        }else if(score >= 60){
+            grade = "D";
+        }else{
+            grade = "F";
+        }
+// Display the grade
+        displayValue('outputGrade', grade);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
