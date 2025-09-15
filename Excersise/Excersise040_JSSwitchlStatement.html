@@ -1,0 +1,72 @@
+<!--
+Instructions:
+Create a variable dayNumber and assign it a numeric value corresponding to a 
+day of the week (1-7). Using a switch statement, determine the day of the week
+and store it in a variable named dayName. Display the result:
+-1 should map to "Monday".
+-2 should map to "Tuesday".
+-3 should map to "Wednesday".
+-4 should map to "Thursday".
+-5 should map to "Friday".
+-6 should map to "Saturda".
+-7 should map to "Sunday".
+-Any other number should default to "Invalid day".
+Important: Do not edit the test.js file. It is used for preview purposes because 
+the JavaScript console is not available on Udemy. All your code will be printed 
+to the preview window when you run your code.
+
+Learning Objective:
+Learn to use switch statements to efficiently handle multiple decision paths 
+based on different case values in JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statements Exercise</title>
+</head>
+<body>
+    <h1>Switch Statements Exercise</h1>
+    <div>
+        <p>Day of the Week: <span id="outputDayName"></span></p>
+    </div>
+    <script>
+        let dayNumber = 2;
+        let dayName;
+        switch (dayNumber){
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default:
+                "Invalid Day."
+        }
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the day of the week
+        displayValue('outputDayName', dayName);
+    </script>
+</body>
+</html>
