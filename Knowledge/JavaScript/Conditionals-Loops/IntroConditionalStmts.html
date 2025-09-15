@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Conditional Statements</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Intro Conditional Statements</h1>
+    <h2>Open console!!!</h2>
+    <script>
+        let isRaining = true;
+        console.log("isRaining: ",isRaining);
+        if (isRaining){
+            console.log("Take an umbrella!");
+        }else{
+            console.log("No need for an umbrella.");
+        }
+        isRaining = false;
+        console.log("isRaining: ",isRaining);
+        if (isRaining){
+            console.log("Take an umbrella!");
+        }else{
+            console.log("No need for an umbrella.");
+        }
+        let age = 20;
+        console.log("Age: ",age);
+        if (age >= 18){
+            console.log("User is eligible to vote");
+        }
+        else{
+            console.log("User is not eligible to vote");
+        }
+        age = 16;
+        console.log("Age: ",age);
+        if (age >= 18){
+            console.log("User is eligible to vote");
+        }
+        else{
+            console.log("User is not eligible to vote");
+        }
+        let score = 75;
+        console.log("User Score: ",score);
+        if (score >= 90){
+            console.log("Grade A");
+        }
+        else if(score >= 80){
+            console.log("Grade B");
+        }
+        else if (score >= 70)
+            console.log("Grade C");
+        else{
+            console.log("Grade D");
+        }
+        let isWeekend = true;
+        let isSunny = false;
+        console.log("isWeekend: ", isWeekend);
+        console.log("isSunny: ", isSunny);
+        if(isWeekend){
+            if(isSunny){
+                console.log("Let's go for a pickninc");
+            }
+            else{
+                console.log("Watch a movie at home");
+            }
+        }
+        else{
+            console.log("It's a weekday and time for work!");
+        }
+        let x = undefined;
+        if (x){
+            console.log("X does not exist");
+        }else{
+            console.log(x)
+        }
+        x = null;
+        if (x){
+            console.log("X does not exist");
+        }else{
+            console.log(x)
+        }
+        x = "";
+        if (x){
+            console.log("X does not exist");
+        }else{
+            console.log(x)
+        }
+        x = 0;
+        if (x){
+            console.log("X does not exist");
+        }else{
+            console.log(x)
+        }
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
