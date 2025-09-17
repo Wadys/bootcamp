@@ -1,0 +1,57 @@
+<!-- 
+Instructions:
+1. Define the Object: Create an object named userData with the following properties:
+-name: Set this to "John Doe".
+-age: Set this to 30.
+-email: Set this to "johndoe@example.com".
+2. Iterate with For In Loop: Using a "for in" loop, iterate over each property in the 
+userData object.
+3. Add Values to propertyDescriptions :  create an array named  propertyDescriptions
+and when looping through the properties of the userData object add all the values
+of each of the properties to propertyDescriptions array. In the end, 
+propertyDescriptions array should have 3 elements.
+-Important: Do not edit the test.js file. It is used for preview purposes because the JavaScript console is not available on Udemy. All your code will be printed to the preview window when you run your code.
+Learning Objective:
+Learn to use the "for in" loop to iterate over the properties of an object, 
+accessing and potentially modifying each property value in JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop Exercise</title>
+</head>
+<body>
+    <h1>For In Loop Exercise</h1>
+    <div>
+        <p>Property Descriptions:</p>
+        <ul id="outputPropertyDescriptions"></ul>
+    </div>
+    <script>
+        let userData ={
+            name: "John Doe",
+            age: 30,
+            emal: "johndoe@example.com",
+        }
+        propertyDescriptions = [];
+        for(let data in userData){
+            propertyDescriptions.push(userData[data])
+        }
+        function displayValue(id, value) {
+            try {
+                const list = document.getElementById(id);
+                value.forEach(item => {
+                    let listItem = document.createElement('li');
+                    listItem.textContent = item;
+                    list.appendChild(listItem);
+                });
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+
+// Display the property descriptions
+        displayValue('outputPropertyDescriptions', propertyDescriptions);
+    </script>
+</body>
+</html>
