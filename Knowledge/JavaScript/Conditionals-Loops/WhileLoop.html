@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While and Do While Loops</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>While and Do While Loops</h1>
+    <h2>Open console!!!</h2>
+    <script>
+        let count = 0
+        while (count < 5){
+            console.log("Count is: ", count);
+            count++; //Whit out this line, this would be an infinite loop 
+        }
+        let number = 0;
+        while(number < 1 || number > 10){
+            console.log("Number is: ", number);
+            number++;
+        }
+        i = 6;
+        do{
+            console.log("Do while:", i);
+            i++
+        }while(i<7) //Runs the process at least once
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

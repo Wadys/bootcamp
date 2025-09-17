@@ -1,0 +1,54 @@
+<!--
+Instructions:
+1. While Loop Task: Create a while loop that increments a variable count from 1 up
+to 5, appending each value to an array named whileResults.
+2. Do While Loop Task: Create a do while loop that does the same but starts the count
+at 6 and continues until the count reaches 10. Store these values in an array named
+doWhileResults.
+Important: Do not edit the test.js file. It is used for preview purposes because the
+JavaScript console is not available on Udemy. All your code will be printed to the
+preview window when you run your code.
+Learning Objective:
+Understand and implement both "while" and "do while" loops to perform repetitive 
+tasks under specific conditions, highlighting the differences in how these loops execute. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While and Do While Loops Exercise</title>
+</head>
+<body>
+    <h1>While and Do While Loops Exercise</h1>
+    <div>
+        <p>While Loop Results: <span id="outputWhileResults"></span></p>
+        <p>Do While Loop Results: <span id="outputDoWhileResults"></span></p>
+    </div>
+    <script>
+        let count = 1;
+        let whileResults = [];
+        let doWhileResults = [];
+        while (count <= 5){
+            whileResults.push(count);
+            console.log(whileResults[count]);
+            count++
+        }
+        count = 6;
+        do{
+            doWhileResults.push(count);
+            console.log(doWhileResults[count]);
+            count++;
+        } while(count <= 10)
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.join(', ');
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results from both loops
+        displayValue('outputWhileResults', whileResults);
+        displayValue('outputDoWhileResults', doWhileResults);
+    </script>
+</body>
+</html>
