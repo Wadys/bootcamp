@@ -1,0 +1,56 @@
+<!--
+Instructions:
+1. Define the Array: Create an array named colorArray with the following color names as 
+strings:
+-"Red"
+-"Green"
+-"Blue"
+-"Yellow"
+2. Iterate with For Of Loop: Using a "for of" loop, iterate over each element in colorArray.
+3. Create Descriptions: For each color in the array, create a descriptive string 
+formatted as "The color is color" (e.g., "The color is Red"). Store these descriptions
+in an array named colorDescriptions.
+4. Display Results: Ensure that colorDescriptions contains the correct strings for each
+color and that these are displayed as list items in the provided HTML structure.
+Important: Do not edit the test.js file. It is used for preview purposes because
+the JavaScript console is not available on Udemy. All your code will be printed to
+the preview window when you run your code.
+Learning Objective:
+Master the use of the "for of" loop to efficiently iterate through array elements,
+allowing direct access and manipulation of each item.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of Loop Exercise</title>
+</head>
+<body>
+    <h1>For Of Loop Exercise</h1>
+    <div>
+        <p>Color Descriptions:</p>
+        <ul id="outputColorDescriptions"></ul>
+    </div>
+    <script>
+        let colorarray = ["Red","Green","Blue","Yellow",];
+        let colorDescriptions = [];
+        for(let color of colorarray){
+            colorDescriptions.push(`The color is ${color}`);
+        }
+        function displayValue(id, value) {
+            try {
+                const list = document.getElementById(id);
+                value.forEach(item => {
+                    let listItem = document.createElement('li');
+                    listItem.textContent = item;
+                    list.appendChild(listItem);
+                });
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the color descriptions
+        displayValue('outputColorDescriptions', colorDescriptions);
+    </script>
+</body>
+</html>
