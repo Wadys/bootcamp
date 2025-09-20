@@ -1,0 +1,54 @@
+<!-- Instructions
+1. Function Declaration: Create a function named calculateSum using function 
+declaration that takes two parameters and returns their sum. Invoke the function to
+calculate the sum of 5 and 3 and save the value to a variable called sum.
+2. Function Expression: Create a function named findMax using function expression that
+takes two parameters and returns the maximum of the two. Invoke the function to find
+max value between 10 and 20 and save the value to a variable called max.
+3. Arrow Function (ES6+): Create an arrow function named isEven that takes a parameter
+and returns true if the number is even, otherwise returns false. Invoke the function
+to check if the number 4 is even or not and save the output to a variable named even .
+Important: Do not edit the test.js file. It is used for preview purposes because 
+the JavaScript console is not available on Udemy. All your code will be printed to the preview window when you run your code.
+
+Learning Objective:
+Learn to define functions using three distinct approaches in JavaScript: Function 
+Declarations, Function Expressions, and Arrow Functions, to understand their syntax and usage contexts. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Creation Exercise</title>
+</head>
+<body>
+    <h1>Function Creation Exercise</h1>
+    <div>
+        <p>Sum of 5 and 3: <span id="outputSum"></span></p>
+        <p>Maximum of 10 and 20: <span id="outputMax"></span></p>
+        <p>Is 4 Even?: <span id="outputIsEven"></span></p>
+    </div>
+    <script>
+        function calculateSum(a,b){
+            return a+b;
+        }
+        const findMax = function (a,b){
+                return a > b ? a : b;}
+        const isEven = (a) => a % 2 === 0
+        let sum = calculateSum(5,3);
+        let max = findMax(10,20);
+        let even = isEven(4);
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.toString();
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+        // Display the results
+        displayValue('outputSum', sum);
+        displayValue('outputMax', max);
+        displayValue('outputIsEven', even);
+    </script>
+</body>
+</html>
