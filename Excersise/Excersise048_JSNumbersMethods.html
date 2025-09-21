@@ -1,0 +1,58 @@
+<!--
+Instructions:
+1. Number Creation and Conversion: Create a variable named sampleNumber initially
+set as a string "123.456". Convert this string into a floating point number and
+store it in convertedNumber.
+2. Rounding a Number: Determine the nearest integer of convertedNumber and store
+this in a variable named roundedNumber.
+3. Precision Handling: Format convertedNumber to two decimal places and store the
+result in a variable named preciseNumber.
+4. Number to String Conversion: Convert convertedNumber back to a string with fixed
+two decimal places and store this in a variable named numberString.
+5. Exponential Representation: Represent convertedNumber in exponential form and
+store this in a variable named exponentialNumber.
+Enhance your ability to manipulate and analyze numerical data using JavaScript's
+built-in number methods, improving precision and formatting in computations. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Number Methods Exercise</h1>
+    <div>
+        <p>Converted Number: <span id="outputConvertedNumber"></span></p>
+        <p>Rounded Number: <span id="outputRoundedNumber"></span></p>
+        <p>Precise Number: <span id="outputPreciseNumber"></span></p>
+        <p>Number as String: <span id="outputNumberString"></span></p>
+        <p>Exponential Number: <span id="outputExponentialNumber"></span></p>
+    </div>
+    <script>
+        let sampleNumber = "123.456";
+        let convertedNumber = parseFloat(sampleNumber);
+        let roundedNumber = Math.round(convertedNumber);
+        let preciseNumber = parseFloat(convertedNumber.toFixed(2));
+        let numberString = convertedNumber.toFixed(2);
+        let exponentialNumber = convertedNumber.toExponential()
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+        // Display the results
+        displayValue('outputConvertedNumber', convertedNumber);
+        displayValue('outputRoundedNumber', roundedNumber);
+        displayValue('outputPreciseNumber', preciseNumber);
+        displayValue('outputNumberString', numberString);
+        displayValue('outputExponentialNumber', exponentialNumber);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

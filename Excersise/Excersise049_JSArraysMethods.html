@@ -1,0 +1,54 @@
+<!--
+Instructions:
+1. Array Creation: Begin with an array named numbersArray containing initial values 
+[10, 20, 30, 40, 50].
+2. Slicing an Array: Use an appropriate method to extract the middle three elements
+(20, 30, 40) from numbersArray and store this in a variable named slicedArray.
+3. Merging Arrays: Merge numbersArray with another array [60, 70] using a suitable
+method and store the result in a variable named mergedArray.
+4. Reversing an Array: Reverse the mergedArray and store this in a variable named
+reversedArray.
+Learning Objective:
+Enhance your understanding of JavaScript's powerful array manipulation capabilities
+through practical use of various array methods, improving your data handling and
+functional programming skills. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Array Methods Exercise</h1>
+    <div>
+        <p>Sliced Array: <span id="outputSlicedArray"></span></p>
+        <p>Merged Array: <span id="outputMergedArray"></span></p>
+        <p>Reversed Array: <span id="outputReversedArray"></span></p>
+    </div>
+    <script>
+        let numberArray = [10,20,30,40,50];
+        let slicedArray = numberArray.slice(1,4);
+        let newArray = [60,70];
+        let mergedArray = numberArray.concat(newArray);
+        let reversedArray = mergedArray.slice().reverse();
+
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.join(', ');  // Assuming all values are arrays
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+
+        // Display the results
+        displayValue('outputSlicedArray', slicedArray);
+        displayValue('outputMergedArray', mergedArray);
+        displayValue('outputReversedArray', reversedArray);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
