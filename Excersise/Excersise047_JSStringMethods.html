@@ -1,0 +1,63 @@
+<!-- 
+Instructions
+Create a string variable and use various string methods to transform and retrieve
+information from it. Perform the following tasks:
+1. String Creation: Define a string variable named sampleText with the value 
+"Hello, JavaScript World!".
+2. Find Character at a Specific Position: Determine the character at position 7
+in sampleText and store it in a variable named charAtIndex.
+3. Convert String to Upper Case: Transform the entire sampleText into upper case
+letters and store the result in a variable named upperCaseText.
+4. Extract a Substring: Retrieve the section of sampleText starting from position
+7 and ending at position 14, and store this in a variable named substringText.
+5. Replace Part of the String: Change "JavaScript" to "JS" within sampleText and
+store the new string in a variable named replacedText.
+6. Create an Array from String: Break down the sampleText into individual words
+and store these in an array named wordsArray.
+Learning Objective:
+Learn to manipulate and explore string properties using JavaScript's built-in
+string methods, enhancing your ability to handle text processing and analysis 
+effectively. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>String Methods Exercise</h1>
+    <div>
+        <p>Character at Index 7: <span id="outputCharAtIndex"></span></p>
+        <p>Upper Case Text: <span id="outputUpperCaseText"></span></p>
+        <p>Substring (Position 7-14): <span id="outputSubstringText"></span></p>
+        <p>Replaced Text: <span id="outputReplacedText"></span></p>
+        <p>Words Array: <span id="outputWordsArray"></span></p>
+    </div>
+    <script>
+        let sampleText = "Hello, JavaScript World!";
+        let charAtIndex = sampleText.charAt(7);
+        let upperCaseText = sampleText.toUpperCase();
+        let substringText = sampleText.substring(7,14);
+        let replacedText = sampleText.replace("JavaScript","JS")
+        let wordsArray = sampleText.split(" ");
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = Array.isArray(value) ? value.join(", ") : value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+        // Display the results
+        displayValue('outputCharAtIndex', charAtIndex);
+        displayValue('outputUpperCaseText', upperCaseText);
+        displayValue('outputSubstringText', substringText);
+        displayValue('outputReplacedText', replacedText);
+        displayValue('outputWordsArray', wordsArray);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
