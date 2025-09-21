@@ -1,0 +1,89 @@
+<!-- Instructions:
+1. Define the Vehicle Object: Create an object named vehicle with the following
+properties:
+-type: Assign the string value "Car".
+-color: Assign the string value "Red".
+-Each property should be utilized within methods to demonstrate the practical 
+use of this keyword.
+2. Add Methods to the Vehicle Object:
+-startEngine: Create a method that returns a string indicating that the engine 
+of the vehicle has started, utilizing this to reference the vehicle's type.
+-displayInfo: Add a method that returns a string providing a description of the
+vehicle, including its type and color using this.
+3. Nested Object with a Method:
+-Include a nested object within vehicle named maintenance.
+-Add a property lastService to the maintenance object with the value "2023-01-01".
+-checkStatus: Create a method within maintenance that returns a string about the
+last service date, using this to access the lastService date.
+4. Print output:
+-Declare variable engineStart and assign the output of invoking startEngine() method.
+-Declare variable vehicleInfo and assign the output of invoking displayInfo() method.
+-Declare variable maintenanceStatus and assign the output of invoking checkStatus
+() method.
+Important: Do not edit the test.js file. It is used for preview purposes because 
+the JavaScript console is not available on Udemy. All your code will be printed 
+to the preview window when you run your code.
+Learning Object:
+Master defining and utilizing methods within JavaScript objects, including the
+strategic use of the this keyword to reference object properties, and explore 
+methods within complex nested object struct -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods in JavaScript Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Methods in JavaScript Exercise</h1>
+    <div>
+        <p>Engine Start: <span id="outputEngineStart"></span></p>
+        <p>Vehicle Info: <span id="outputVehicleInfo"></span></p>
+        <p>Maintenance Status: <span id="outputMaintenanceStatus"></span></p>
+    </div>
+    <script>
+        const vehicle = {
+            type : "Car",
+            color : "Red",
+            maintenance : {
+                lastService : "2023-01-01",
+            },
+            // getColor : function(){
+            //     return this.color;
+            // },
+            // getType : function(){
+            //     return this.type;
+            // },
+            startEngine : function(){
+                return `Engine of the ${this.type} has started`;
+            },
+            displayInfo : function(){
+                return `This is a ${this.color} colored ${this.type}`;
+            },
+            checkStatus : function(){
+                return `The last service date for ${this.type} was on ${this.maintenance.lastService}`;
+            },
+        };
+        let engineStart = vehicle.startEngine();
+        let vehicleInfo = vehicle.displayInfo();
+        let maintenanceStatus = vehicle.checkStatus();
+
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+        // Display the results
+        displayValue('outputEngineStart', engineStart);
+        displayValue('outputVehicleInfo', vehicleInfo);
+        displayValue('outputMaintenanceStatus', maintenanceStatus);
+
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
