@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator and Arrays</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Spread Operator and Arrays</h1>
+    <h2>Open console!!!</h2>
+    <script>
+        let numbers = [1,2,3];
+        let moreNumbers = [4,5,6];
+        let allNumbers = [...numbers,...moreNumbers]; //The spread operator can be used to combine 2 arrays and cobinethem into one
+        let fruits = ["Apple","Bananas","Orange"]; //We can also use the spread operator with inclusions to the list
+        let moreFruits = ["Grapes", ...fruits, "Pineapple"]
+
+        console.log(allNumbers);
+        console.log(moreFruits);
+        let nestedArray = [
+            [1,2],
+            [3,4],
+        ];
+        let copiedArray = [...nestedArray]//This is a shallow copy
+        console.log(nestedArray);
+        console.log(copiedArray);
+        copiedArray[1] = [5,6];
+        
+
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
