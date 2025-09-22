@@ -1,0 +1,50 @@
+<!--
+Instructions:
+1. Generate a Random Number: Use the Math object to generate a random number between 0 and 1, and store it in a variable named randomNumber.
+2. Round a Number: Round the randomNumber to the nearest whole number and store this value in a variable named roundedNumber.
+3. Calculate the Square Root: Calculate the square root of a number (e.g., 64) using the Math object and store the result in a variable named squareRoot.
+4. Find the Maximum Value: Use the Math object to find the maximum value from a set of numbers (e.g., 10, 20, 30, 40, 50) and store this in a variable named maxValue.
+5. Calculate Exponentiation: Compute the result of raising 2 to the power of 3 using the Math object and store this in a variable named powerResult.
+Learning Objective:
+Master the use of the Math object to perform mathematical operations efficiently in JavaScript, enhancing your computational logic and ability to handle various mathematical tasks. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object Methods Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Math Object Methods Exercise</h1>
+    <div>
+        <p>Random Number: <span id="outputRandomNumber"></span></p>
+        <p>Rounded Number: <span id="outputRoundedNumber"></span></p>
+        <p>Square Root of 64: <span id="outputSquareRoot"></span></p>
+        <p>Maximum Value: <span id="outputMaxValue"></span></p>
+        <p>2 to the power of 3: <span id="outputPowerResult"></span></p>
+    </div>
+    <script>
+        let randomNumber = Math.random(1);
+        let roundedNumber = Math.round(randomNumber);
+        let squareRoot = Math.sqrt(64);
+        let maxValue = Math.max(10,20,30,40,50);
+        let powerResult = Math.pow(2,3);
+        function displayValue(id, value) {
+        try {
+            document.getElementById(id).textContent = value.toString();
+        } catch (e) {
+            console.error("Error displaying value for " + id + ": " + e.message);
+        }
+    }
+    // Display the results
+    displayValue('outputRandomNumber', randomNumber);
+    displayValue('outputRoundedNumber', roundedNumber);
+    displayValue('outputSquareRoot', squareRoot);
+    displayValue('outputMaxValue', maxValue);
+    displayValue('outputPowerResult', powerResult);
+    </script>
+</body><footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
