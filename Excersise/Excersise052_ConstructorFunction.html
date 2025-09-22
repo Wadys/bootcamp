@@ -1,0 +1,60 @@
+<!--Instructions:
+1. Define the Constructor Function: Create a constructor function named Book
+that initializes a new object with properties for title, author, and year. 
+Include a method getSummary that returns a summary of the book.
+2. Constructor Function Details:
+-Properties:
+--title: The title of the book.
+--author: The author of the book.
+--year: The publication year of the book.
+-Method:
+-getSummary: This method should return a string formatted exactly as: "Title by
+Author, published in Year". Replace Title, Author, and Year with the respective
+property values of the book object.
+3.Instantiate Objects: Use the Book constructor to create two book objects:
+-First book: title "To Kill a Mockingbird", author "Harper Lee", year 1960 and
+save to variable book1
+-Second book: title "1984", author "George Orwell", year 1949 and save to variable
+book2
+4. Display Book Information: Call the getSummary method on each object to retrieve
+the detailed summary of each book and store these outputs in variables for display.
+The first book summary should be save to firstBookInfo variable and the second book
+summary should be saved to the secondBookInfo variable.
+Important: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not available
+on Udemy. All your code will be printed to the preview window when you run your code.
+Learn Objective:
+Learn to define and use constructor functions to create objects, enhancing your
+understanding of object-oriented programming concepts in JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Functions Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Constructor Functions Exercise</h1>
+    <div>
+        <p>First Book Info: <span id="outputFirstBookInfo"></span></p>
+        <p>Second Book Info: <span id="outputSecondBookInfo"></span></p>
+    </div>
+    <script>
+        
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the book information
+        displayValue('outputFirstBookInfo', firstBookInfo);
+        displayValue('outputSecondBookInfo', secondBookInfo);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
