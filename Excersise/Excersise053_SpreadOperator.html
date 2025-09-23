@@ -1,0 +1,50 @@
+<!--
+Instructions:
+1. Create Initial Arrays: Define two arrays named arrayOne and arrayTwo with initial
+values [1, 2, 3] and [4, 5, 6], respectively.
+2. Combine Arrays: Use the spread operator to combine arrayOne and arrayTwo into
+a new array named combinedArray.
+3. Copy an Array: Use the spread operator to make a copy of combinedArray and store
+it in a new array named copiedArray.
+4. Modify Copied Array: Add an additional element 7 to the copiedArray to
+demonstrate that changes to the copied array do not affect the original combinedArray.
+Important: Write all your code and solutions in index.js. Do not edit the test.js 
+file. It is used for preview purposes because the JavaScript console is not available
+on Udemy. All your code will be printed to the preview window when you run your code.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Spread Operator Exercise</h1>
+    <div>
+        <p>Combined Array: <span id="outputCombinedArray"></span></p>
+        <p>Copied Array: <span id="outputCopiedArray"></span></p>
+    </div>
+    <script>
+        let arrayOne = [1,2,3];
+        let arrayTwo = [4,5,6];
+        let combinedArray = [...arrayOne,...arrayTwo];
+        let copiedArray = [...combinedArray];
+        copiedArray.push(7);
+
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.join(', ');
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+        // Display the results
+        displayValue('outputCombinedArray', combinedArray);
+        displayValue('outputCopiedArray', copiedArray);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

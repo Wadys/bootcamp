@@ -23,10 +23,23 @@
             [3,4],
         ];
         let copiedArray = [...nestedArray]//This is a shallow copy
-        console.log(nestedArray);
-        console.log(copiedArray);
-        copiedArray[1] = [5,6];
-        
+        console.log("Original Array: "+nestedArray);
+        console.log("Copied Array: "+copiedArray);
+        copiedArray[0][0] = [5];
+        console.log("After Modiffing the copied Array:");
+        console.log("Original Array: "+nestedArray);
+        console.log("Copied Array: "+copiedArray);
+        console.log("Creating a new Array using a for cycle and spread constructor:")
+        let copiedArray2 =[];
+        for (array of nestedArray){
+            copiedArray2.push([...array])
+        }
+        console.log("Original Array: "+nestedArray);
+        console.log("Copied Array2: "+copiedArray2);
+        copiedArray2[0][0] = [99];
+        console.log("After Modiffing the copied Array:");
+        console.log("Original Array2: "+nestedArray);
+        console.log("Copied Array2: "+copiedArray2);
 
     </script>
 </body>
