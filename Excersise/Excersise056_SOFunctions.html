@@ -1,0 +1,49 @@
+<!-- 
+Instructions:
+1. Define a Function: Create a function named calculateSum that takes three numbers
+as parameters and returns their sum.
+2. Declare Arguments in an Array: Create an array named numbersArray with three numeric
+values [10, 20, 30].
+3. Use Spread Operator in Function Call: Use the spread operator to pass the values
+from numbersArray as arguments to the calculateSum function. Store the result in
+a variable named result.
+Important: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not 
+available on Udemy. All your code will be printed to the preview window when you
+run your code.
+Learning Objective:
+Learn to effectively use the spread operator to pass array elements as arguments to functions, streamlining function invocation and argument handling. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator in Function Calls Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Spread Operator in Function Calls Exercise</h1>
+    <div>
+        <p>Sum Result: <span id="outputResult"></span></p>
+    </div>
+    <script>
+        function calculateSum(a,b,c){
+            return a+b+c;
+        }
+        let numbersArray = [10,20,30];
+        let result = calculateSum(...numbersArray)
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputResult', result);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
