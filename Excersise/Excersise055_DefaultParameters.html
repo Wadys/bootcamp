@@ -1,0 +1,60 @@
+<!--
+Instructions:
+1. Define a Function with Default Parameters: Create a function named createGreeting
+that takes two parameters:
+-name with a default value of "Guest"
+-message with a default value of "Welcome to our site!" The function should return
+a greeting string combining both parameters.
+2. Call Function with Various Arguments:
+-Call createGreeting with no arguments and store the result in variable defaultGreeting
+-Call createGreeting with the name "Alice" only and store the result in variable 
+greetingForAlice .
+-Call createGreeting with both "Bob" for name and "Happy to see you!" for message
+and store the result in variable customGreetingForBob
+IMPORTANT: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not available
+on Udemy. All your code will be printed to the preview window when you run your code.
+Learning Objective
+Learn to define functions with default parameters to enhance function robustness and
+default handling, improving code maintainability and readability.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter Values Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Default Parameter Values Exercise</h1>
+    <div>
+        <p>Default Greeting: <span id="outputDefaultGreeting"></span></p>
+        <p>Greeting for Alice: <span id="outputGreetingForAlice"></span></p>
+        <p>Custom Greeting for Bob: <span id="outputCustomGreetingForBob"></span></p>
+    </div>
+    <script>
+        function createGreeting(name = "Guest", message="Welcome to our site!"){
+            return message+' '+name;
+        }
+        let defaultGreeting =createGreeting();
+        let greetingForAlice = createGreeting("Alice");
+        let customGreetingForBob = createGreeting("Bob","Happy to see you!")
+
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputDefaultGreeting', defaultGreeting);
+        displayValue('outputGreetingForAlice', greetingForAlice);
+        displayValue('outputCustomGreetingForBob', customGreetingForBob);
+
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

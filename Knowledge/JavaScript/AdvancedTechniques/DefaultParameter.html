@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameters</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Default Parameters</h1>
+    <h2>Open console!!!</h2>
+    <script>
+        function greet(name = "Guest"){
+            console.log(`Hello, ${name}!!!`);//Instead of printing blank if the parameter is 
+// not sent then defaul would print Guest.
+        }
+        greet();
+        greet("Mela");
+        function orderCoffee(size="medium", type = "black"){
+            console.log(`You ordered a ${size} ${type} coffee!`);
+        }
+        orderCoffee();
+        orderCoffee("small");
+        orderCoffee("small", "latte");
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
