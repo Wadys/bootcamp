@@ -1,0 +1,63 @@
+<!--
+Instructions:
+1. Create Initial Objects: Define two objects:
+-person with properties { name: "John", age: 25 }
+-job with properties { title: "Developer", company: "Tech Co" }
+2. Merge Objects: Use the spread operator to merge person and job into a new object
+named employee.
+3. Overwrite an Object Property: Overwrite the age property by setting it to 30
+in the new employee object during the merge.
+4. Add New Property: Add a new property yearStarted with a value of 2020 to the
+employee object using the spread operator.
+5.Copy Object: Create a copy of the employee object and store it in employeeCopy. 
+Then modify employeeCopy by changing the company to "New Tech Co" to demonstrate
+that the original employee object remains unchanged.
+Important: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not 
+available on Udemy. All your code will be printed to the preview window when you 
+run your code.
+Learning Objective:
+Master the use of the spread operator to manipulate object properties, including
+merging, overwriting, and copying objects, enhancing your understanding of object
+manipulation in JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator with Objects Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Spread Operator with Objects Exercise</h1>
+    <div>
+        <p>Employee Info: <span id="outputEmployeeInfo"></span></p>
+        <p>Modified Employee Copy Info: <span id="outputEmployeeCopyInfo"></span></p>
+    </div>
+    <script>
+        let person = {
+            name: "John",
+            age: 25,
+        };
+        let job = {
+            title: "Developer",
+            company: "Tec Co",
+        };
+        let employee = {...person, ...job, age:30, yearStarted:2020};
+        employeeCopy = {...employee, company: "New Tech Co"}
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = JSON.stringify(value, null, 2);
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputEmployeeInfo', employee);
+        displayValue('outputEmployeeCopyInfo', employeeCopy);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
