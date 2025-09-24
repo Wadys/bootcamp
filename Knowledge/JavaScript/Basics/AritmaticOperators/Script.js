@@ -1,0 +1,37 @@
+// 1. Addition (+)
+let sum = 5 + 3;
+console.log("5 + 3 =", sum); // Output: 8
+
+// 2. Subtraction (-)
+let difference = 10 - 6;
+console.log("10 - 6 =", difference); // Output: 4
+
+// 3. Multiplication (*)
+let product = 7 * 4;
+console.log("7 * 4 =", product); // Output: 28
+
+// 4. Division (/)
+let quotient = 20 / 5;
+console.log("20 / 5 =", quotient); // Output: 4
+
+// 5. Modulus (%)
+let num1 = 15;
+let num2 = 4;
+let remainder = num1 % num2;
+console.log(`${num1} % ${num2} =`, remainder); // Output: 3
+
+// 6. Exponentiation (**)
+let base = 2;
+let exponent = 3;
+let power = base ** exponent;
+console.log(`${base} ** ${exponent} =`, power); // Output: 8
+
+// 7. Increment (++)
+let incrementValue = 5;
+incrementValue++; // Increases the value by 1
+console.log("Increment 5 by 1 =", incrementValue); // Output: 6
+
+// 8. Decrement (--)
+let decrementValue = 5;
+decrementValue--; // Decreases the value by 1
+console.log("Decrement 5 by 1 =", decrementValue); // Output: 4

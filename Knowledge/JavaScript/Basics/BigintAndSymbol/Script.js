@@ -1,0 +1,35 @@
+// Introduction to BigInt
+
+// Show the maximum safe integer in JavaScript using Number.MAX_SAFE_INTEGER
+let maxInteger = Number.MAX_SAFE_INTEGER;
+console.log("Max Safe Integer in JavaScript:", maxInteger); // Output: 9007199254740991
+
+// Trying to add to the max safe integer
+let incorrectSum = maxInteger + 1;
+console.log("Incorrect Sum:", incorrectSum); // Output: 9007199254740992 (seems correct, but let's go further)
+
+// Now adding another 1 to the result
+let furtherIncorrectSum = maxInteger + 2;
+console.log("Further Incorrect Sum:", furtherIncorrectSum); // Output: 9007199254740992 (Oops! Same result as before!)
+
+// Introducing BigInt for very large numbers
+let bigInteger = BigInt(maxInteger) + 2n; // Using 'n' to denote a BigInt
+console.log("Accurate Sum with BigInt:", bigInteger); // Output: 9007199254740993n (correct!)
+
+// Conclusion: BigInt is needed to work with integers larger than Number.MAX_SAFE_INTEGER
+
+// Introduction to Symbol
+
+// Creating a basic Symbol
+let symbol1 = Symbol();
+console.log("Symbol1:", symbol1); // Output: Symbol()
+
+// Symbols are unique, even if they have the same description
+let symbol2 = Symbol("description");
+let symbol3 = Symbol("description");
+
+console.log("Symbol2:", symbol2); // Output: Symbol(description)
+console.log("Symbol3:", symbol3); // Output: Symbol(description)
+
+// Comparing two symbols with the same description
+console.log("Are symbol2 and symbol3 equal?", symbol2 === symbol3); // Output: false (each Symbol is unique!)
