@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Rest Parameters</h1>
+    <h2>Open console!!!</h2>
+    <script>
+// Here instead of defining a fixed number of paramets we defined spread operators
+        function sum(...numbers){
+            let total = 0;
+            for(number of numbers){
+                total += number;
+            }
+            return total;
+        }
+        console.log("Sum of parameters: "+sum(1,2,3));
+        console.log("Sum of parameters: "+sum(1,2,3,4,5,6));
+//This function will return an array with the result of the multiplier(first param) times
+//each additional parameter sent.
+        function multiplier(multiplier, ...numbers){
+            let results = [];
+            for(let num of numbers){
+                results.push(num*multiplier);
+            }
+            return results;
+        }
+        console.log(multiplier(2,3,4,5,6,12,33));
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

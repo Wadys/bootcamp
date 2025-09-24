@@ -1,0 +1,62 @@
+<!--
+Instructions:
+1. Define a Function with Rest Parameters: Create a function named sumNumbers
+that uses rest parameters to take any number of numeric arguments and returns
+their sum.
+2. Test Function Calls:
+-Call sumNumbers with three arguments 1, 2, 3 and store the result in variable
+called result1
+-Call sumNumbers with five arguments 10, 20, 30, 40, 50 and store the result in
+variable called result2
+-Call sumNumbers with no arguments and ensure it handles this gracefully and save
+the result in a variables called result3.
+IMPORTANT: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not
+available on Udemy. All your code will be printed to the preview window when you
+run your code.
+Learning Objective:
+Learn to define functions with rest parameters to handle an indefinite number
+of arguments, enhancing the flexibility of function definitions. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Rest Parameters Exercise</h1>
+    <div>
+        <p>Sum of 1, 2, 3: <span id="outputSum1"></span></p>
+        <p>Sum of 10, 20, 30, 40, 50: <span id="outputSum2"></span></p>
+        <p>Sum of no arguments: <span id="outputSum3"></span></p>
+    </div>
+    <script>
+        function sumNumbers(...nums){
+            let result = 0;
+            for(let num of nums){
+                result += num;
+            }
+            return result;
+        }
+        let result1 = sumNumbers(1,2,3);
+        let result2 = sumNumbers(10,20,30,40,50);
+        let result3 = sumNumbers(); 
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputSum1', result1);
+        displayValue('outputSum2', result2);
+        displayValue('outputSum3', result3);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
