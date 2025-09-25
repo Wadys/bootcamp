@@ -5,77 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Styled Form</title>
         <link href="style.css" rel="stylesheet" />
-        <style>
-/*Using box-sizing: border-box; ensures that the two-column layout (with width: 
-48% for each column) remains consistent and doesn't break, even when padding or
-borders are applied to the input elements.*/
-
-            * {
-            box-sizing: border-box;
-            }
-
-            body {
-            font-family: Arial, sans-serif;
-            }
-
-            /* Form layout in two columns */
-            .form-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            background-color: #f2f2f2;
-            padding: 20px;
-            border-radius: 5px;
-            }
-
-            .form-column {
-            width: 48%;
-            }
-
-            input,
-            select {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0 24px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            }
-
-            /*  Hide the arrow */
-            /* Not an elegant solution */
-            select {
-            appearance: none;
-            }
-
-            button {
-            width: 100%;
-            background-color: #4caf50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            }
-
-            button:hover {
-            background-color: #45a049;
-            }
-
-            /* ! Only needed for Color Input Style */
-            input[type="color"] {
-            width: 100%;
-            padding: 5px;
-            height: 40px;
-            margin-top: 5px;
-            }
-
-            /* ! Only needed for Checkbox and Radio */
-            input[type="checkbox"],
-            input[type="radio"] {
-            width: auto;
-            }
-        </style>
+        <link rel="stylesheet" href="/Knowledge/Forms/ColorPicker/Index.html">
     </head>
     <body>
         <h2>Forms with HTML and CSS</h3>
@@ -91,6 +21,8 @@ borders are applied to the input elements.*/
                 placeholder="Your name.."
                 required
                 />
+
+
                 <!-- Email -->
                 <label for="email">Email</label>
                 <input
@@ -165,26 +97,6 @@ borders are applied to the input elements.*/
                 <option value="canada">Canada</option>
                 <option value="usa">USA</option>
                 </select>
-
-
-                <!-- Gender Radio Inputs -->
-                <p>Gender:</p>
-                <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female" />
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other" />
-                <label for="other">Other</label>
-
-                <!-- Agree or Disagree Checkboxes -->
-                <p>Please indicate whether you agree or disagree to the terms:</p>
-                <div>
-                <input type="checkbox" id="agree" name="terms" />
-                <label for="agree">I agree</label>
-
-                <input type="checkbox" id="disagree" name="terms" />
-                <label for="disagree">I disagree</label>
-                </div>
 
             </div>
             </div>
