@@ -39,7 +39,19 @@ Each section will expand over time as I continue practicing and building project
 
 ---
 
+## 🖼️ Repository Preview
+Here’s how the repository currently looks on GitHub:
+
+![Repository Preview](/assets/repo.png)
+
+*(Image taken from my [GitHub repository](https://github.com/Wadys/bootcamp))*  
+
+
 ## 🛠️ How to Use
 1. Clone the repository:
    ```bash
    git clone https://github.com/Wadys/bootcamp
+
+## 📌 Notes
+This repository is primarily for learning and experimentation.
+If you’re also learning Fullstack Development, feel free to explore, reuse code, or suggest improvements!
