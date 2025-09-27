@@ -1,0 +1,44 @@
+/* Example 1: Font Style (Italic) */
+.italic {
+    font-style: italic;
+}
+
+/* Example 2: Font Style (Oblique) */
+.oblique {
+    font-style: oblique;
+}
+
+/* Example 3: Font Variant (small-caps) */
+.small-caps {
+    font-variant: small-caps;
+}
+
+/* Example 4: Font Size in Pixels */
+.font-size-px {
+    font-size: 20px;
+}
+
+/* Example 5: Font Size in EM */
+.font-size-em {
+    font-size: 2em; /* Relative to parent font size */
+}
+
+/* Example 6: Font Size in REM */
+.font-size-rem {
+    font-size: 1.5rem; /* Relative to root font size */
+}
+
+/* Example 7: Font Weight (Bold) */
+.font-weight {
+    font-weight: bold;
+}
+
+/* Example 8: Font Weight (Lighter) */
+.font-weight-lighter {
+    font-weight: lighter;
+}
+
+/* Example 9: Font Shorthand (style, variant, weight, size, family) */
+.font-shorthand {
+    font: italic small-caps bold 1.5rem "Arial", sans-serif;
+}

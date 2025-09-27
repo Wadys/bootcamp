@@ -1,0 +1,41 @@
+a:link{
+    color: blue;
+    text-decoration: none;
+}
+a:visited{
+    color: lime;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    color: orange; 
+}
+.hover-div{
+    background-color: green;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+.hover-div:hover{
+    background-color: purple;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+ul.first-child-list li:first-child{
+    color: red;
+    font-weight: bold;
+}
+ul.last-child-list li:last-child{
+    background-color: blue;
+    font-weight: bold;
+}
+ul.nth-child-list li:nth-child(3){
+    background-color: yellow;
+}
+ul.only-child-list li:only-child{
+    color: green;
+    font-style: italic;
+    background-color: lightgray;
+}

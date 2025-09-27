@@ -1,0 +1,23 @@
+.before-example::before{
+    content: "Before: ";
+    color: green;
+}
+.after-example::after{
+    content: "After: ";
+    color: red;
+}
+.first-letter-example::first-letter{
+    font-size: 2rem;
+    color: blue;
+}
+.first-line-example::first-line{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.marker-example li::marker{
+    color: purple;
+    font-size: 1.5rem;
+}
+.marker-example{
+    list-style-type: circle;
+}

@@ -1,0 +1,23 @@
+/* This will cover all child paragraphs from the parent div */
+div p{
+    color: blue;
+}
+/* This will cover direct child paragraphs from the parent div*/
+div > p{
+    font-weight: bold;
+}
+    /* Here we use a class to use the same hierarchy */
+.main p{
+    color: red;   
+}
+/* Siblings definition */
+h2 + p{
+    color: yellow;
+}
+/* All siblings of H2 */
+h2 ~ p{
+    color: green;
+}
+a.highlighted{
+    color: gold;
+}
