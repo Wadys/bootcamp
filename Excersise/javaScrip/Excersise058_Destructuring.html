@@ -1,0 +1,55 @@
+<!--
+Instructions:
+1. Define a Function with Array Destructuring: Create a function named processScores
+that takes an array as a parameter and uses destructuring to extract the first two
+elements as firstScore and secondScore. The function should return the sum of these
+two scores.
+2. Test Function Calls:
+-Call processScores with an array [80, 90, 70, 60] and store the result in a 
+variable called result1
+-Call processScores with an array [75, 85] and store the result in a variable 
+called result2
+IMPORTANT: Write all your code and solutions in index.js. Do not edit the test.js 
+file. It is used for preview purposes because the JavaScript console is not
+available on Udemy. All your code will be printed to the preview window when you
+run your code.
+Learning Objective:
+Learn to simplify the process of handling arrays passed as arguments to functions
+by using array destructuring directly in function parameters, enhancing code clarity
+and efficiency. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring in Function Parameters Exercise</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Array Destructuring in Function Parameters Exercise</h1>
+    <div>
+        <p>Sum of first two scores (Set 1): <span id="outputSum1"></span></p>
+        <p>Sum of first two scores (Set 2): <span id="outputSum2"></span></p>
+    </div>
+    <script>
+        function processScores([firstScore, secondScore, ...rest]){
+            return firstScore + secondScore;
+        }
+        let result1 = processScores([80, 90, 70, 60]);
+        let result2 = processScores([75, 85]);
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputSum1', result1);
+        displayValue('outputSum2', result2);
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

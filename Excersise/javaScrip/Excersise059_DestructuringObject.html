@@ -1,0 +1,67 @@
+<!-- Destructuring Objects Exercise
+Instructions for Object Destructuring in Function Parameters Exercise
+
+Define a Function with Object Destructuring: Create a function named 
+displayPersonInfo that takes an object as a parameter. Use destructuring to extract
+the name and age properties directly in the function parameter list. The function
+should return a string describing the person using these properties.
+
+Test Function Calls:
+Call displayPersonInfo with an object { name: "Alice", age: 30, job: "Developer" }
+and store the result in a variable called infoAlice .
+
+Call displayPersonInfo with an object { name: "Bob", age: 25 } and store the result
+in a variable called infoBob
+
+Important: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not
+available on Udemy. All your code will be printed to the preview window when you
+run your code.
+
+Learn to effectively use object destructuring within function parameters to simplify 
+accessing specific properties, enhancing function readability and ease of use. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring in Function Parameters Exercise</title>
+</head>
+<body>
+    <h1>Object Destructuring in Function Parameters Exercise</h1>
+    <div>
+        <p>Person Info (Alice): <span id="outputInfoAlice"></span></p>
+        <p>Person Info (Bob): <span id="outputInfoBob"></span></p>
+    </div>
+    <script>
+        function displayPersonInfo(object){
+            return `${object.name} is ${object.age} years old.`;
+
+        }
+        const Alice = {
+            name: "Alice",
+            age: 30,
+            job: "Developer"
+        }
+        const Bob = {
+            name: "Bob",
+            age: 25
+        }
+        let infoAlice = displayPersonInfo(Alice);
+        let infoBob = displayPersonInfo(Bob);
+
+
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputInfoAlice', infoAlice);
+        displayValue('outputInfoBob', infoBob);
+
+    </script>
+</body>
+</html>
