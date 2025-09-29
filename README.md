@@ -5,19 +5,19 @@ It serves as a learning space where I can organize concepts, examples, and exerc
 
 ---
 
-## 📚 Learning Source
+## Learning Source
 I am following the Udemy online course:  
-👉 [The Complete Full-Stack Web Development Bootcamp](https://www.udemy.com/course/complete-full-stack-web-development-bootcamp/)
+ [The Complete Full-Stack Web Development Bootcamp](https://www.udemy.com/course/complete-full-stack-web-development-bootcamp/)
 
 The examples and exercises in this repository are based on the content provided by this course, with my own implementations and notes.
 
 ---
 
-## 🏠 Project Structure
+## Project Structure
 I started by implementing a **basic home page** that acts as a central hub for navigation.  
 This page contains links to examples and exercises, organized by **technology area**, making it easier to revisit topics in the future.
 
-### 🔗 Areas Covered
+### Areas Covered
 - **HTML**
   - Examples
   - Exercises
@@ -32,14 +32,14 @@ Each section will expand over time as I continue practicing and building project
 
 ---
 
-## 🚀 Goals
+## Goals
 - Strengthen my foundation in **frontend technologies** (HTML, CSS, JavaScript).  
 - Transition into **fullstack development** by gradually incorporating backend technologies and frameworks.  
 - Use this repository as a personal reference for future projects.  
 
 ---
 
-## 🖼️ Repository Preview
+## Repository Preview
 Here’s how the repository currently looks on GitHub:
 
 ![Repository Preview](/assets/repo.png)
@@ -47,11 +47,11 @@ Here’s how the repository currently looks on GitHub:
 *(Image taken from my [GitHub repository](https://github.com/Wadys/bootcamp))*  
 
 
-## 🛠️ How to Use
+## How to Use
 1. Clone the repository:
    ```bash
    git clone https://github.com/Wadys/bootcamp
 
-## 📌 Notes
+## Notes
 This repository is primarily for learning and experimentation.
 If you’re also learning Fullstack Development, feel free to explore, reuse code, or suggest improvements!
