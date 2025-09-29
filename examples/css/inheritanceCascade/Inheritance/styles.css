@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    color: darkblue;
+    text-align: center;
+}
+
+/* Basic Inheritance */
+.parent-text {
+    font-size: 18px;
+}
+
+.child-text {
+    color: darkred; /* Overrides color */
+}
+
+/* Non-Inherited Properties */
+.non-inherited {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: lightgray;
+}
+
+.child-box {
+    width: 100px;
+    padding: 5px;
+    border: 2px solid blue;
+    background-color: lightyellow;
+}
+
+/* Advanced Inheritance: Overriding Parent Styles */
+.parent-container {
+    font-size: 20px;
+    line-height: 1.5;
+    color: darkgreen;
+    padding: 10px;
+    border: 2px solid green;
+}
+
+.child-container {
+    font-size: 16px; /* Overrides font-size */
+    padding: 5px;
+    border: 2px solid red;
+    background-color: lightpink;
+}
+
+/* Multiple Levels of Inheritance */
+.outer-box {
+    color: navy;
+    padding: 15px;
+    border: 2px solid navy;
+    background-color: lightblue;
+}
+
+.middle-box {
+    padding: 10px;
+    border: 2px solid darkblue;
+    background-color: lightgray;
+    font-size: 18px; /* Overrides font-size */
+}
+
+.inner-box {
+    padding: 5px;
+    border: 2px solid blue;
+    background-color: white;
+}

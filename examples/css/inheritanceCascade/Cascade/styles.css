@@ -1,0 +1,39 @@
+/* Basic Source Order: The last rule wins */
+p {
+color: blue;
+}
+p {
+color: red;
+} /* This rule wins due to source order */
+
+/* Nearest Ancestor Wins */
+div {
+font-size: 20px;
+} /* Applies to p inside div */
+section {
+font-size: 16px;
+} /* Applies to p inside section */
+article div p {
+font-size: 24px;
+} /* More specific rule, nearest ancestor in article wins */
+
+/* Inherited Styles Accumulate */
+body {
+font-family: Arial;
+} /* Inherited by all children */
+.parent {
+color: green;
+} /* Parent element sets color */
+.child {
+font-weight: bold;
+} /* Inherited color, adds bold weight */
+
+/* Directly Applied Style Wins */
+#direct-style {
+color: purple;
+} /* Direct ID selector wins */
+
+/* Inline Style Wins */
+p {
+font-style: italic;
+}

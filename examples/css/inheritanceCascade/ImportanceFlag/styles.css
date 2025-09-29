@@ -1,0 +1,36 @@
+/* General Styles */
+body {
+font-family: Arial, sans-serif;
+}
+
+/* Basic Example - !important Flag */
+.basic {
+color: red !important; /* !important wins */
+}
+
+.basic {
+color: blue; /* This will be overridden by the !important rule above */
+}
+
+/* Inline Styles vs. !important */
+.inline {
+color: purple !important; /* !important wins over inline style */
+}
+
+/* ID and Class Selectors vs. !important */
+.class-example {
+color: green !important; /* !important wins */
+}
+
+#id-example {
+color: blue; /* ID selector loses to !important */
+}
+
+/* Combinator Selectors with !important */
+#wrapper #element .link a.important-link {
+color: darkred !important; /* !important wins */
+}
+
+a {
+color: blue; /* This will lose to the combinator selector with !important */
+}
