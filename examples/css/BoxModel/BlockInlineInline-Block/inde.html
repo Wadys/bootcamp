@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS Display Properties Demonstration</title>
+        <link rel="stylesheet" href="/examples/css/BoxModel/BlockInlineInline-Block/style.css">
+    </head>
+    <body>
+        <h1>CSS Display Properties Demonstration</h1>
+
+        <!-- Block display -->
+        <section class="container">
+            <h2>Block Element</h2>
+            <!-- Block elements stack below each other -->
+            <div class="block-element">
+            This is a block-level element. It takes up the full width and starts on
+            a new line.
+            </div>
+            <!-- Even if I use an inline element like a span it behaves like a block element because of the display set to block in CSS -->
+            <span class="block-element">
+            This is a block-level element. It takes up the full width and starts on
+            a new line.
+            </span>
+        </section>
+
+        <!-- Inline display -->
+        <section class="container">
+            <h2>Inline Element</h2>
+            <span class="inline-element">This is an inline element.</span>
+            <span class="inline-element"
+            >It stays on the same line as other inline elements.</span
+            >
+        </section>
+
+        <!-- Inline-block display -->
+        <section class="container">
+            <h2>Inline-block Element</h2>
+            <div class="inline-block-element">This is inline-block 1.</div>
+            <div class="inline-block-element">This is inline-block 2.</div>
+        </section>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a>
+    </footer>
+  </html>

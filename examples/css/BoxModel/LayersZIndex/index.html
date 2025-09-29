@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS Z-Index Demonstration</title>
+        <link rel="stylesheet" href="/examples/css/BoxModel/LayersZIndex/style.css">
+    </head>
+    <body>
+        <h1>CSS Z-Index Demonstration</h1>
+
+<!-- Z-Index Basics Example -->
+        <!-- z-index controls the stacking order of positioned elements (those with 
+        position: relative, absolute, or fixed).
+        Elements with a higher z-index value are stacked on top of elements with
+        a lower z-index.
+        In this example, three boxes are positioned with different z-index values.
+        The green box (z-index: 3) is stacked on top, followed by the red box 
+        (z-index: 2), and the blue box (z-index: 1).-->
+        <section class="container">
+            <h2>Z-Index: Controlling Stacking Order</h2>
+            <div class="box box1">z-index: 1</div>
+            <div class="box box2">z-index: 2</div>
+            <div class="box box3">z-index: 3</div>
+            <p>
+            Explanation: The <strong>z-index</strong> property controls the stacking
+            order of positioned elements. Elements with a higher z-index value are
+            stacked on top of those with a lower z-index. Here, the green box
+            (z-index: 3) is on top, followed by the red box (z-index: 2), and the
+            blue box (z-index: 1) at the bottom.
+            </p>
+        </section>
+
+<!-- Example without z-index -->
+        <!-- When no z-index is specified, the stacking order is determined by the order
+        of the elements in the DOM (Document Object Model). Later elements in the 
+        HTML are stacked on top of earlier ones.
+        This section demonstrates how elements without a z-index behave when placed
+        in the same container. The second box appears on top of the first simply 
+        because it comes later in the code.-->
+        <section class="container">
+            <h2>Elements Without Z-Index</h2>
+            <div class="box-no-zindex">No z-index</div>
+            <div class="box-overlapping">No z-index</div>
+            <p>
+            Explanation: When no <strong>z-index</strong> is specified, elements are
+            stacked based on their order in the DOM. Here, the second box appears on
+            top simply because it comes later in the code.
+            </p>
+        </section>
+
+<!-- Example showing stacking context and how it resets with nested elements -->
+
+        <!-- When a parent element has a z-index value, it creates a new stacking 
+        context. The child elements' z-index values are calculated relative to 
+        their parent, not the entire page.
+        In this example, the parent has a z-index: 10, and the child has a z-index:
+        5. Even though the child has a lower z-index than the parent, it is still 
+        nested within the parent and does not overlap it.-->
+        <section class="container">
+            <h2>Stacking Context: Nested Elements</h2>
+            <div
+            style="
+                position: relative;
+                z-index: 10;
+                background-color: lightgreen;
+                padding: 20px;
+            "
+            >
+            Parent Element (z-index: 10)
+            <div
+                style="
+                position: absolute;
+                z-index: 5;
+                background-color: lightcoral;
+                width: 100px;
+                height: 100px;
+                top: 50px;
+                left: 50px;
+                "
+            >
+                Child Element (z-index: 5)
+            </div>
+            </div>
+            <p>
+            Explanation: A new <strong>stacking context</strong> is created when a
+            positioned element has a z-index. The child element’s z-index (5) is
+            relative to the parent’s stacking context (z-index: 10), meaning the
+            parent remains on top even though its z-index is higher.
+            </p>
+        </section>
+
+<!-- Example with z-index and negative z-index -->
+
+        <!-- Negative z-index values allow elements to be stacked behind other elements
+        with a positive or zero z-index.
+        In this example, the blue box has a z-index: -1, so it appears behind the 
+        red box, which has a z-index: 1.-->
+        <!-- The parent container now has z-index: 0 to ensure that the element with
+            z-index: -1 appears behind other elements inside the container but still
+            within the visible stacking context of the parent.
+            This avoids the blue box being hidden behind the gray container itself.
+            THIS IS STACKING CONTEXT-->
+        <section class="container" style="position: relative; z-index: 0">
+            <h2>Z-Index With Negative Values</h2>
+            <div
+            class="box"
+            style="
+                background-color: lightblue;
+                position: absolute;
+                top: 150px;
+                left: 150px;
+                z-index: -1;
+            "
+            >
+            z-index: -1
+            </div>
+            <div
+            class="box"
+            style="
+                background-color: lightcoral;
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                z-index: 1;
+            "
+            >
+            z-index: 1
+            </div>
+            <p>
+            Explanation: <strong>z-index</strong> can also be set to negative
+            values, which places elements behind those with a positive z-index or no
+            z-index. In this case, the blue box (z-index: -1) appears behind the red
+            box (z-index: 1).
+            </p>
+        </section>
+    </body>
+    <footer>
+        <a href="/index.html">Home</a>
+    </footer>
+</html>

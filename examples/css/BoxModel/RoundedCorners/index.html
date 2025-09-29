@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Rounded Corners Tutorial</title>
+        <link rel="stylesheet" href="/examples/css/BoxModel/RoundedCorners/style.css">
+    </head>
+    <body>
+        <h1>CSS Rounded Corners Tutorial</h1>
+
+        <!-- Uniform rounded corners -->
+        <section class="container">
+            <h2>Uniform Rounded Corners</h2>
+            <div class="box uniform-rounded">border-radius: 20px;</div>
+            <p>
+            In this example, the <i>border-radius</i> property is applied uniformly
+            to all four corners, making them rounded by 20px.
+            </p>
+        </section>
+
+        <!-- Specific corner rounding -->
+        <section class="container">
+            <h2>Specific Corner Rounding</h2>
+            <div class="box top-left-rounded">Top-left: 30px</div>
+            <div class="box top-right-rounded">Top-right: 30px</div>
+            <div class="box bottom-left-rounded">Bottom-left: 30px</div>
+            <div class="box bottom-right-rounded">Bottom-right: 30px</div>
+            <p>
+            Here, different corners of each box have been rounded individually using
+            <i>border-top-left-radius</i>, <i>border-top-right-radius</i>,
+            <i>border-bottom-left-radius</i>, and
+            <i>border-bottom-right-radius</i> properties.
+            </p>
+        </section>
+
+        <!-- Different rounding for each corner -->
+        <section class="container">
+            <h2>Different Rounding for Each Corner</h2>
+            <div class="box different-corners">20px 40px 60px 80px</div>
+            <p>
+            In this example, each corner has a different radius using
+            <i>border-radius</i> with four values: top-left, top-right,
+            bottom-right, and bottom-left.
+            </p>
+        </section>
+
+        <!-- Elliptical rounding -->
+        <section class="container">
+            <h2>Elliptical Rounding</h2>
+            <div class="box elliptical-rounded">50px / 20px</div>
+            <p>
+            The <i>border-radius</i> property is applied using two values to create
+            an elliptical shape. The first value is the horizontal radius, and the
+            second is the vertical radius.
+            </p>
+        </section>
+
+        <!-- Fully rounded circle -->
+        <section class="container">
+            <h2>Circle (Fully Rounded)</h2>
+            <div class="circle"></div>
+            <p>
+            By setting the <i>border-radius</i> to 50%, you can create a perfect
+            circle if the width and height of the element are equal.
+            </p>
+        </section>
+    </body>
+    <footer>
+        <a href="/index.html">Home</a>
+    </footer>
+</html>

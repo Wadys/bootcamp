@@ -1,0 +1,65 @@
+/* General styling for containers */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    background-color: lightgray;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+}
+
+/* Styling for float boxes */
+.box {
+    background-color: lightblue;
+    padding: 10px;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid darkblue;
+}
+
+/* Float left */
+.float-left {
+    float: left;
+}
+
+/* Float right */
+.float-right {
+    float: right;
+}
+
+/* No float */
+.float-none {
+    float: none;
+}
+
+/* Clearfix for container to clear floated elements */
+/* 
+.clearfix::after:
+    The ::after pseudo-element inserts a new, invisible element after the content of the container.
+    This pseudo-element is used to clear the floats without requiring additional markup in the HTML.
+    content: "":
+
+    This property is used to generate content in the ::after pseudo-element. In this case, an empty string ("") is provided, meaning the pseudo-element doesn't actually insert any visible content.
+    It's required in order for the pseudo-element to function.
+    display: block:
+
+    Sets the pseudo-element to be a block-level element, ensuring that it takes up space and affects the layout.
+    This makes the invisible element behave like a normal block element.
+    clear: both:
+
+    This property clears the float, ensuring that no floated elements (both float: left and float: right) are allowed to float beside the pseudo-element.
+    By clearing the floats, the parent container is forced to expand and wrap around the floated child elements.
+*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

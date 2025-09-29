@@ -1,0 +1,37 @@
+/* General styles for container */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+    background-color: lightgray;
+    margin-bottom: 30px;
+}
+
+/* Adjacent sibling margins */
+.adjacent-box {
+    background-color: lightblue;
+    padding: 10px;
+    margin: 20px 0; /* Top and bottom margin */
+}
+
+/* Parent-child collapsing margin */
+.parent {
+    background-color: lightgreen;
+    margin-top: 20px;
+}
+
+.child {
+    background-color: lightcoral;
+    margin-top: 20px; /* Parent-child collapsing margin */
+}
+
+/* Empty block-level elements */
+.empty-element {
+    background-color: lightyellow;
+    height: 0; /* No height, so only margin affects it */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

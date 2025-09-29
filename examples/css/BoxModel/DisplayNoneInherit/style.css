@@ -1,0 +1,55 @@
+/* Container styles for better visibility */
+.container {
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Block-level element */
+.block-element {
+    display: block;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Inline element */
+.inline-element {
+    display: inline;
+    background-color: lightgreen;
+    padding: 10px;
+    margin-right: 1rem;
+    width: 700px; /* Assigning a width does not have an impact on inline elements*/
+    height: 300px; /* Even height will not have an impact on these */
+}
+
+/* Inline-block element */
+.inline-block-element {
+    display: inline-block;
+    background-color: lightcoral;
+    padding: 10px;
+    /* Demonstrate change in width and height */
+    width: 200px; /* Width is respected in case on inline-block */
+    height: 70px; /* Height is respected in case on inline-block */
+    margin-right: 20px;
+}
+
+/* Element hidden using display: none */
+.hidden-element {
+    display: none;
+    background-color: lightyellow;
+    padding: 10px;
+}
+
+/* Inherited display */
+.parent-inherit {
+    display: inline-block;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.child-inherit {
+    display: inherit;
+    background-color: lightyellow;
+    padding: 5px;
+}

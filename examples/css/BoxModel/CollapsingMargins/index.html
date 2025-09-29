@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS Collapsing Margins Demonstration</title>
+        <link rel="stylesheet" href="/examples/css/BoxModel/CollapsingMargins/style.css">
+    </head>
+    <body>
+        <h1>CSS Collapsing Margins Demonstration</h1>
+
+        <!-- Adjacent Sibling Margins -->
+
+        <!-- 
+        Adjacent Sibling Elements:
+            Reason: When two block-level elements are adjacent siblings, and both have vertical margins (top/bottom), their margins collapse into one. The browser collapses the margins into the larger of the two rather than adding them. In this case, both elements have a 20px margin, so the result is 20px, not 40px.
+            This behavior ensures that there is no excessive space between elements.
+        -->
+        <section class="container">
+            <h2>Adjacent Sibling Elements</h2>
+            <div class="adjacent-box">First box with 20px margin</div>
+            <div class="adjacent-box">Second box with 20px margin</div>
+        </section>
+
+        <!-- Parent-Child Collapsing Margins -->
+
+        <!-- 
+            Parent-Child Collapsing Margins:
+            Reason: When a child element has a top margin and is inside a parent with no padding, border, or content separating them, the child’s margin collapses with the parent’s margin. This is because CSS considers the margins of parent and child as one block. As a result, the child’s margin “escapes” the parent and collapses into one margin, usually the larger of the two.
+            This keeps vertical spacing more consistent without stacking margins.
+        -->
+        <section class="container">
+            <h2>Parent-Child Margin Collapsing</h2>
+            <div class="parent">
+            <div class="child">Child with 20px top margin inside the parent</div>
+            </div>
+        </section>
+
+        <!-- Empty Element with Collapsing Margin -->
+        <!-- 
+            Empty Block-Level Elements:
+            Reason: If a block-level element has no height (like in the case of an empty element), its top and bottom margins will collapse into a single margin. Since the element itself takes up no space, the browser treats the margins as if they were stacked, resulting in only one margin being applied.
+            This behavior prevents unnecessary spacing when an element has no content or height.
+        -->
+        <section class="container">
+            <h2>Empty Block-Level Element</h2>
+            <div class="empty-element"></div>
+            <p class="empty-element">
+            In this case, the empty block-level element has no height, so the top
+            and bottom margins collapse into a single 30px margin.
+            </p>
+        </section>
+    </body>
+    <footer>
+        <a href="/index.html">Home</a>
+    </footer>
+</html>

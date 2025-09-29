@@ -1,0 +1,41 @@
+/* General styling for containers */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: lightgray;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    width: 300px;
+    height: 150px; /* Fixed height to demonstrate overflow */
+}
+
+/* Example of overflow: visible (default) */
+.overflow-visible {
+    overflow: visible; /* Default behavior */
+}
+
+/* Example of overflow: hidden */
+.overflow-hidden {
+    overflow: hidden; /* Content is clipped */
+}
+
+/* Example of overflow: scroll */
+.overflow-scroll {
+    overflow: scroll; /* Scrollbars are always visible */
+}
+
+/* Example of overflow: auto */
+.overflow-auto {
+    overflow: auto; /* Scrollbars appear when necessary */
+}
+
+/* Content inside the box to demonstrate overflow */
+.content {
+    background-color: lightblue;
+    padding: 10px;
+}
