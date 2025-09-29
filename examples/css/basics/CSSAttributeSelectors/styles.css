@@ -1,0 +1,35 @@
+/* [attribute] - Targets elements that have the specified attribute */
+input[type] {
+    border: 2px solid blue;
+}
+
+/* [attribute=value] - Targets elements with an attribute matching the exact value */
+input[type="text"] {
+    background-color: lightyellow;
+}
+
+/* [attribute~=value] - Targets elements whose attribute value contains a space-separated list, and one of them matches */
+[class~="highlight"] {
+    color: red;
+}
+
+/* [attribute|=value] - Targets elements whose attribute starts with a specific value or is exactly that value */
+[lang|="en"] {
+    border: 2px solid green;
+}
+
+/* [attribute^=value] - Targets elements whose attribute value starts with the specified value */
+a[href^="https"] {
+    color: purple;
+}
+
+/* [attribute$=value] - Targets elements whose attribute value ends with the specified value */
+a[href$=".pdf"] {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* [attribute*=value] - Targets elements whose attribute value contains the specified value */
+a[href*="example"] {
+    font-weight: bold;
+}

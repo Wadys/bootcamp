@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <link rel="stylesheet" href="/examples/css/PseudoClasses/styles.css">
+</head>
+<body>
+    <a href="unvisitedlink.com">Unvisited  Link</a><br>
+    <a href="visitedlink.com">Visited Link</a><br>
+    <a href="visitedlink.com">Hover Link</a><br>
+    <a href="visitedlink.com">Active Link</a><br>
+    <br><div class="hover-div">Mouse Over Me </div>
+<!-- :first-child Example -->
+    <h2>:first-child Example</h2>
+    <ul class="first-child-list">
+        <li>This is the first item (red and bold).</li>
+        <li>This is the second item.</li>
+        <li>This is the third item.</li>
+        <li>This is the last item.</li>
+    </ul>
+
+<!-- :last-child Example -->
+        <h2>:last-child Example</h2>
+        <ul class="last-child-list">
+        <li>This is the first item.</li>
+        <li>This is the second item.</li>
+        <li>This is the last item (blue and bold).</li>
+    </ul>
+
+<!-- :nth-child(n) Example -->
+    <h2>:nth-child(n) Example</h2>
+    <ul class="nth-child-list">
+        <li>This is the first item.</li>
+        <li>This is the second item.</li>
+        <li>This is the third item (yellow background).</li>
+        <li>This is the fourth item.</li>
+    </ul>
+<!-- ASK AI TO TARGET 4th Element of the above list  -->
+<!-- HERE YOU MIGHT WANT TO USE THE LAST CHILD CLASS DEPENDING ON THE USE CASE. SO NEVER BLINDLY TRUST AI -->
+<!-- :only-child Example -->
+    <h2>:only-child Example 1</h2>
+    <ul class="only-child-list">
+        <li>This is the only child.</li>
+    </ul>
+    <h2>:only-child Example 2</h2>
+    <ul class="only-child-list">
+        <li>This is the not the only child.</li>
+        <li>This is the not the only child.</li>
+    </ul>
+
+<!-- NOT ONLY CHILD Example -->
+    <h2>Not Only Child Example</h2>
+    <ul class="not-only-child-list">
+        <li>First item.</li>
+        <li>Second item.</li>
+    </ul>
+</body>
+<footer>
+    <br><a href="/index.html">Home</a><br>
+</footer>
+</html>

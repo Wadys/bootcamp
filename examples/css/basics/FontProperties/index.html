@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Font Styles and Shorthand Lecture</title>
+        <link rel="stylesheet" href="/examples/css/FontProperties/styles.css">
+    <body>
+        <!-- Example 1: Font Style (Italic) -->
+        <p class="italic">Italic text.</p>
+
+        <!-- Example 2: Font Style (Oblique) -->
+        <p class="oblique">Oblique text.</p>
+
+        <!-- Example 3: Font Variant (Small Caps) -->
+        <p class="small-caps">Small-caps text.</p>
+
+        <!-- Example 4: Font Size in Pixels -->
+        <p class="font-size-px">Font size in pixels (20px).</p>
+
+        <!-- Example 5: Font Size in EM -->
+        <p class="font-size-em">Font size in em (2em).</p>
+
+        <!-- Example 6: Font Size in REM -->
+        <p class="font-size-rem">Font size in rem (1.5rem).</p>
+
+        <!-- 
+        Can Weights Be Applied to All Fonts?
+        Not all fonts support every weight. Here’s what happens when you apply font weights to fonts:
+
+        * Fonts With Predefined Weights:
+        Some fonts come with specific weights (e.g., 400 for normal, 700 for bold). If the font supports different weights, the browser will use the corresponding weight when you apply font-weight.
+
+    * Fonts Without Multiple Weights:
+        If a font doesn’t support a specific weight, the browser will simulate the weight:
+        CHECK GOOGLE FONTS FOR ALL AVAILABLE WEIGHTS
+        -->
+
+        <p>Control Text</p>
+        <!-- Example 7: Font Weight (Bold) -->
+        <p class="font-weight">Bold text.</p>
+
+        <!-- Example 8: Font Weight (Lighter) -->
+        <p class="font-weight-lighter">Lighter text.</p>
+
+        <!-- Example 9: Font Shorthand -->
+        <!--The sequence in the font shorthand property is important, and certain properties are required, while others are optional. When using the shorthand, if a property is omitted, it will default to its initial value.
+
+        Order of Font Shorthand Properties:
+        The correct order for the font shorthand property is:
+
+        font-style (optional)
+        font-variant (optional)
+        font-weight (optional)
+        font-size (required)
+        line-height (optional, if used, should follow font-size with a /)
+        font-family (required)
+
+        -->
+        <p class="font-shorthand">
+        Shorthand font style (italic, small-caps, bold, 1.5rem, Arial).
+        </p>
+    </body>
+    <footer>
+        <br><a href="/index.html">Home</a><br>
+    </footer>
+</html>

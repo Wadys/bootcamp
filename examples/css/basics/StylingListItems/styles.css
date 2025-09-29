@@ -1,0 +1,50 @@
+/* Different List Item Markers */
+.list-disc {
+    list-style-type: disc; /* Default disc marker */
+}
+
+.list-circle {
+    list-style-type: circle; /* Circle marker */
+}
+
+.list-square {
+    list-style-type: square; /* Square marker */
+}
+
+.list-decimal {
+    list-style-type: decimal; /* Decimal marker (numbers) */
+}
+
+.list-none {
+    list-style-type: none; /* No marker */
+}
+
+/* Positioning List Item Markers */
+.list-inside {
+    list-style-position: inside; /* Marker inside the content */
+}
+
+.list-outside {
+    list-style-position: outside; /* Marker outside the content */
+}
+
+/* Remove Default List Item Styles */
+.list-reset {
+    list-style: none; /* Remove default marker */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* List Shorthand Property */
+.list-shorthand {
+    list-style: square inside; /* Using the shorthand to combine marker type and position */
+}
+
+/* Styling List Items with Colors */
+.colored-list li {
+    color: green; /* Color for list item text */
+}
+
+.colored-list li::marker {
+    color: red; /* Color for list markers */
+}
