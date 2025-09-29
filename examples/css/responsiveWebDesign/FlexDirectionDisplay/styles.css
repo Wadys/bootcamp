@@ -1,0 +1,56 @@
+/* General Styles */
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+background-color: #f9f9f9;
+}
+
+h1,
+h2 {
+text-align: center;
+color: #333;
+}
+
+/* Flexbox Demonstration Styles */
+.flex-container {
+display: flex;
+gap: 10px;
+padding: 10px;
+background-color: lightgray;
+margin-bottom: 20px;
+border: 2px solid black;
+}
+
+.flex-item {
+background-color: lightblue;
+padding: 20px;
+text-align: center;
+border: 1px solid #333;
+}
+
+/* Different Flex Directions */
+
+/* Default Flex (row) */
+.default-flex {
+flex-direction: row;
+}
+
+/* Flex Direction: row */
+.row-flex {
+flex-direction: row;
+}
+
+/* Flex Direction: row-reverse */
+.row-reverse-flex {
+flex-direction: row-reverse;
+}
+
+/* Flex Direction: column */
+.column-flex {
+flex-direction: column;
+}
+
+/* Flex Direction: column-reverse */
+.column-reverse-flex {
+flex-direction: column-reverse;
+}

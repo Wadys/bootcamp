@@ -1,0 +1,58 @@
+/* General Styles */
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+background-color: #f9f9f9;
+}
+
+h1,
+h2 {
+text-align: center;
+color: #333;
+}
+
+/* Flexbox Container and Item Styling */
+.flex-container {
+display: flex;
+/* !Add the flex direction to see how it behaves when direction is set to column */
+/* flex-direction: column; */
+gap: 10px;
+padding: 10px;
+background-color: lightgray;
+margin-bottom: 30px;
+border: 2px solid black;
+height: 200px; /* Set a fixed height for the container */
+}
+
+.flex-item {
+background-color: lightblue;
+padding: 20px;
+text-align: center;
+border: 1px solid #333;
+}
+
+/* Align Items - stretch (default) */
+.stretch {
+/* !Remember it respects the height and the width assigned to element. So stetch will not work if a definitive height is assigned to an element  */
+align-items: stretch; /* This is the default value */
+}
+
+/* Align Items - flex-start */
+.flex-start {
+align-items: flex-start; /* Also known as "start", but "flex-start" is safer to use */
+}
+
+/* Align Items - flex-end */
+.flex-end {
+align-items: flex-end; /* Also known as "end", but "flex-end" is safer to use */
+}
+
+/* Align Items - center */
+.center {
+align-items: center;
+}
+
+/* Align Items - baseline */
+.baseline {
+align-items: baseline;
+}

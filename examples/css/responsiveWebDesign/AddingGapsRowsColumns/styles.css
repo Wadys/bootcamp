@@ -1,0 +1,54 @@
+/* General Styles */
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+background-color: #f9f9f9;
+}
+
+h1,
+h2 {
+text-align: center;
+color: #333;
+}
+
+/* Flexbox Container and Item Styling */
+.flex-container {
+display: flex;
+flex-wrap: wrap; /* Allows items to wrap to the next line */
+padding: 10px;
+background-color: lightgray;
+margin-bottom: 30px;
+border: 2px solid black;
+height: 300px; /* Set a height for the container */
+}
+
+.flex-item {
+background-color: lightblue;
+padding: 20px;
+text-align: center;
+border: 1px solid #333;
+}
+
+/* Variable widths for flex items */
+.flex-item.wide {
+width: 40%;
+}
+
+.flex-item.medium {
+width: 30%;
+}
+
+.flex-item.narrow {
+width: 20%;
+}
+
+/* Gap Example - Using gap shorthand */
+.gap-shorthand {
+gap: 10px 30px; /* Shorthand for setting both row-gap and column-gap */
+}
+
+/* Row-Gap and Column-Gap Example */
+.row-column-gap {
+row-gap: 30px; /* Vertical spacing between rows */
+column-gap: 15px; /* Horizontal spacing between columns */
+}
