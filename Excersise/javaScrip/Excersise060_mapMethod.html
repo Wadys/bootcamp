@@ -1,0 +1,64 @@
+<!-- 
+Instructions:
+1. Array of products Already give: An array named products that includes several objects. Each object represents a product with properties. Thsi array already exists in index.js file:
+-name: Name of the product.
+-price: Base price of the product before tax.
+-category: Category of the product.
+2. Transform Data Using Map:
+-Extract Product Names: Use the map method to create an array named productNames
+that contains only the names of the products.
+-Calculate Prices with Tax: Use the map method to create an array named
+productPricesWithTax. Increase each product's price by 10% to account for tax.
+Ensure this calculation is part of your instruction.
+3. Expected Output:
+-Display the original list of products.
+-Display the list of product names.
+-Display the list of prices with tax, ensuring each price is rounded to two decimal
+places for readability.
+IMPORTANT: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not available
+on Udemy. All your code will be printed to the preview window when you run your code.
+Learning Objective:
+Master the use of the map method to transform array elements, facilitating advanced
+data manipulation and functional programming techniques. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Method Exercise</title>
+</head>
+<body>
+    <h1>Map Method Exercise</h1>
+    <div>
+        <p>Original Products: <span id="outputOriginalProducts"></span></p>
+        <p>Product Names: <span id="outputProductNames"></span></p>
+        <p>Prices with Tax: <span id="outputPricesWithTax"></span></p>
+    </div>
+    <script>
+        const products = [
+            { name: "Laptop", price: 1000, category: "Electronics" },
+            { name: "Coffee Maker", price: 100, category: "Kitchen" },
+            { name: "Book", price: 20, category: "Literature" }
+        ];
+        let productNames = products.map((product) => {
+            return product.name;
+        });
+        let productPricesWithTax = products.map((product) => {  
+            return product.price * 1.10;
+        });
+
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = JSON.stringify(value);
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputOriginalProducts', products);
+        displayValue('outputProductNames', productNames);
+        displayValue('outputPricesWithTax', productPricesWithTax.map(product => product.price.toFixed(2)));
+    </script>
+</body>
+</html>
