@@ -1,0 +1,8 @@
+1. web.dev
+https://web.dev/learn/css/transitions#transition_properties
+This Link helps with how the transition function works
+
+2. AutoPrefixer
+https://autoprefixer.github.io/
+This link helps to create css updated to be compatible witht the latest browsers 
+transitioning
