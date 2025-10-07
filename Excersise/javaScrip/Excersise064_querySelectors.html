@@ -1,0 +1,37 @@
+<!--
+Instructions:
+1. Use querySelector(): Select the first element with the class highlight and store
+it in a variable named firstHighlight.
+2. Use querySelectorAll(): Select all elements with the tag p and store them in a
+variable named allParagraphs.
+IMPORTANT: Write all your code and solutions in index.js.
+Learning Objective:
+Master the use of querySelector and querySelectorAll to select DOM elements
+efficiently using CSS selectors, enhancing precision in DOM manipulation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Exercise</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+</head>
+<body>
+    <h1>Query Selector Exercise</h1>
+    <div>
+        <p>This is a paragraph.</p>
+        <div class="highlight">Highlighted text 1</div>
+        <div class="highlight">Highlighted text 2</div>
+        <p class="highlight">Highlighted paragraph</p>
+        <p>Another paragraph.</p>
+    </div>
+    <script>
+        let firstHighlight = document.querySelector(".highlight");
+        let allParagraphs = document.querySelectorAll("p");
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
