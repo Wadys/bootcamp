@@ -1,0 +1,45 @@
+<!--
+Instructions:
+1. Work with Provided Array: You will be provided with an array named numbersArray
+containing numeric values. Your task is to apply the reduce method to this array.
+2. Calculate the Sum: Use the reduce method to calculate the sum of all numbers in
+the numbersArray and store the result in a variable named totalSum.
+3. Find the Maximum Value: Also use the reduce method to determine the maximum
+number in the numbersArray and store this in a variable named maxValue.
+IMPORTANT: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not
+available on Udemy. All your code will be printed to the preview window when
+you run your code.
+Learning Objective:
+Learn to use the reduce method to aggregate data from an array into a single
+value, enhancing your data processing skills in JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce Method Exercise</title>
+</head>
+<body>
+    <h1>Reduce Method Exercise</h1>
+    <div>
+        <p>Total Sum: <span id="outputTotalSum"></span></p>
+        <p>Maximum Value: <span id="outputMaxValue"></span></p>
+    </div>
+    <script>
+        const numbersArray = [10, 20, 30, 40, 50];
+        let totalSum = numbersArray.reduce((accumulator, current) => accumulator + current, 0);
+        let maxValue = numbersArray.reduce((max, current) => (current > max ? current : max), numbersArray[0]);
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value;
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+        // Display the results
+        displayValue('outputTotalSum', totalSum);
+        displayValue('outputMaxValue', maxValue);
+    </script>
+</body>
+</html>
