@@ -1,0 +1,38 @@
+<!--
+Instructions:
+1. Use getElementById(): Select the element with the ID main-title and store it
+in a variable named mainTitle.
+2. Use getElementsByClassName(): Select all elements with the class highlight and
+store them in a variable named highlightedItems.
+3. Use getElementsByTagName(): Select all p elements and store them in a variable
+named paragraphs.
+IMPORTANT: Write all your code and solutions in index.js.
+Learning Objective:
+Learn to effectively select and manipulate DOM elements using various methods such
+as getElementById(), getElementsByClassName(), and getElementsByTagName(). -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting DOM Elements</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+</head>
+<body>
+    <h1 id="main-title">Hello World</h1>
+    <p>This is a paragraph.</p>
+    <div class="highlight">Highlighted text 1</div>
+    <div class="highlight">Highlighted text 2</div>
+    <p class="highlight">Highlighted paragraph</p>
+    <p>Another paragraph.</p>
+    <script>
+        let mainTitle = document.getElementById('main-title');
+        let highlightedItems = document.getElementsByClassName("highlight");
+        let paragraphs = document.getElementsByTagName("p");
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
