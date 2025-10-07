@@ -1,0 +1,45 @@
+<!--
+Instructions:
+1. Work with Provided Array: You will be provided with an array named numbersArray
+that contains a mixture of positive and negative numbers. Your task is to filter
+this array.
+2. Filter Positive Numbers: Use the filter method to create a new array named
+positiveNumbers that contains only the positive numbers from the numbersArray.
+3. Filter Even Numbers: Additionally, create another array named evenNumbers that
+includes only the even numbers from the numbersArray.
+Important: Write all your code and solutions in index.js. Do not edit the test.js
+file. It is used for preview purposes because the JavaScript console is not available 
+on Udemy. All your code will be printed to the preview window when you run your code.
+Learning Objective:
+Learn to apply the filter method to extract elements from an array that meet certain
+conditions, enhancing your ability to handle and analyze data collections effectively.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Method Exercise</title>
+</head>
+<body>
+    <h1>Filter Method Exercise</h1>
+    <div>
+        <p>Positive Numbers: <span id="outputPositiveNumbers"></span></p>
+        <p>Even Numbers: <span id="outputEvenNumbers"></span></p>
+    </div>
+    <script>
+        const numbersArray = [1, -2, 3, 4, -5, 6, -7, 8, 9, -10];
+        let positiveNumbers = numbersArray.filter(num => num > 0);
+        let evenNumbers = numbersArray.filter(num => num % 2 === 0);
+        function displayValue(id, value) {
+            try {
+                document.getElementById(id).textContent = value.join(', ');
+            } catch (e) {
+                console.error("Error displaying value for " + id + ": " + e.message);
+            }
+        }
+// Display the results
+        displayValue('outputPositiveNumbers', positiveNumbers);
+        displayValue('outputEvenNumbers', evenNumbers);
+    </script>
+</body>
+</html>
