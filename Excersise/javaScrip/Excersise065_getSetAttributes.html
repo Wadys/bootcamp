@@ -1,0 +1,32 @@
+<!--
+Instructions:
+Use getAttribute(): Retrieve the href attribute from an anchor tag with the ID
+learnMoreLink and store it in a variable named originalLink.
+Use setAttribute(): Change the href attribute of the learnMoreLink to point to
+"https://www.example.com/new".
+Additional Task: Use getAttribute() to retrieve the class attribute from a <div>
+with the class info-box and store this in a variable named originalClass. Then, 
+use setAttribute() to add an additional class highlighted to this <div>.
+Important: Write all your code and solutions in index.js.
+Learning Objective:
+Learn to manipulate HTML element attributes dynamically using getAttribute and
+setAttribute, enhancing your ability to interact with and modify DOM properties.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get/Set Attribute Exercise</title>
+</head>
+<body>
+    <h1>Get/Set Attribute Exercise</h1>
+    <a id="learnMoreLink" href="https://www.example.com">Learn more about us</a>
+    <div class="info-box">Important information here.</div>
+    <script>
+        let originalLink = document.getElementById("learnMoreLink").getAttribute("href");
+        document.getElementById("learnMoreLink").setAttribute("href", "https://www.example.com/new");
+        let originalClass = document.querySelector(".info-box").getAttribute("class");
+        document.querySelector(".info-box").setAttribute("class", originalClass + " highlighted");
+    </script>
+</body>
+</html>
