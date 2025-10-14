@@ -6,3 +6,8 @@ This Link helps with how the transition function works
 https://autoprefixer.github.io/
 This link helps to create css updated to be compatible witht the latest browsers 
 transitioning
+
+3. mdn 
+https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
+This links helps understand mode the functionality of the nodes and type of nodes,
+Showing description and Examples
