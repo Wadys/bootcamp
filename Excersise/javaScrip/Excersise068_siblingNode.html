@@ -1,0 +1,45 @@
+<!--
+Instructions
+1. Select the Next Sibling Node: Use the nextSibling property to find the next
+sibling node of the <span> with the ID middle and store it in a variable named
+nextSiblingNode.
+2. Select the Previous Sibling Node: Use the previousSibling property to find the
+previous sibling node of the same <span> and store it in a variable named
+previousSiblingNode.
+3. Select the Next Sibling Element: Use the nextElementSibling property to find the
+next sibling element of the <span> and store it in a variable named nextSiblingElement.
+4. Select the Previous Sibling Element: Use the previousElementSibling property to
+find the previous sibling element of the <span> and store it in a variable named
+previousSiblingElement.
+Important: Write all your code and solutions in index.js.
+LEARNING OBJECTIVE:
+Learn to navigate between sibling elements in the DOM tree using nextSibling,
+previousSibling, nextElementSibling, and previousElementSibling properties, enhancing
+your understanding of DOM node relat-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibling Node Selection Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        Text before span
+        <span id="middle">Middle span</span>
+        More text after span
+        <div>Another element</div>
+    </div>
+    <script>
+        let nextSiblingNode = document.getElementById("middle").nextSibling;
+        let previousSiblingNode = document.getElementById("middle").previousSibling;
+        let nextSiblingElement = document.getElementById("middle").nextElementSibling;
+        let previousSiblingElement = document.getElementById("middle").previousElementSibling;
+    </script>
+</body>
+</html>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
