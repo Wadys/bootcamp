@@ -1,0 +1,37 @@
+<!--
+Instructions
+Select Child Elements: Use the children property to select all child elements of
+the <div> with the ID content and store them in a variable named childElements.
+Select Child Nodes: Use the childNodes property to select all child nodes
+(including text nodes and elements) of the same <div> and store them in a variable
+    named childNodes.
+Important: Write all your code and solutions in index.js.
+Learning Objective:
+Learn to navigate the DOM tree by selecting child elements and nodes from a 
+given parent element, enhancing your skills in DOM tree traversal. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Element and Node Selection Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            Text before span
+            <span>Important text</span>
+            More text
+        </div>
+    </div>
+    <script>
+        let childElements = document.getElementById("content").children;
+        let childNodes = document.getElementById("content").childNodes;
+    </script>
+</body>
+</html>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
