@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>parentNode vs parentElement Example</title>
+        <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+        <link rel="stylesheet" href="/style.css" />
+        <style>
+            .highlight {
+            background-color: yellow;
+            padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Understanding parentNode vs parentElement</h1>
+        <div id="container" class="highlight">
+            <p id="paragraph">This is a paragraph inside a div.</p>
+            <span>Some extra content in a span.</span>
+        </div>
+        <!-- Empty Text Node for Testing -->
+        <div>
+            <!-- Empty Text Node Below -->
+            <p id="textNodeExample">Some text here.</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    <footer class="wrapper">
+        <br><a href="/index.html">Home</a>
+    </footer>
+</html>

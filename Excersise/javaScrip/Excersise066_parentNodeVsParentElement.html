@@ -1,0 +1,32 @@
+<!-- 
+Instructions
+Select Parent Element: Use the parentElement property to select the parent of
+the <span> element inside a <div> and store it in a variable named parentDiv.
+Select Parent Node: Use the parentNode property to select the parent node of the
+same <span> element and store it in a variable called parentNode
+Important: Write all your code and solutions in index.js.
+Learning Objective:
+Learn to navigate the DOM tree by selecting parent elements and nodes from a given
+child element, enhancing your understanding of DOM tree traversal. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Element Selection Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p>This is a paragraph in a container.</p>
+        <div id="content">
+            <span id="highlight">This text is highlighted!</span>
+        </div>
+    </div>
+    <script>
+        let parentDiv = document.getElementById("highlight").parentElement;
+        let parentNode = document.getElementById("highlight").parentNode;
+    </script>
+</body>
+</html>
