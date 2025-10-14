@@ -21,4 +21,4 @@ console.log(Node.COMMENT_NODE); // 8
 while (commentNode && commentNode.nodeType !== Node.COMMENT_NODE) {
     commentNode = commentNode.previousSibling;
 }
-console.log("Comment Node:", commentNode);
+console.log("Comment Node:", commentNode); // This is a comment node
