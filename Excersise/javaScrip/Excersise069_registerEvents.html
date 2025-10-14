@@ -1,0 +1,51 @@
+<!--
+Instructions
+1. Inline Event Handler:
+-Add an inline event handler to a button that changes its text to "Clicked!" when
+clicked. It needs to be added in index.html.
+2. On-event Handler:
+-Assign an on-event handler to another button that changes its background color
+to blue when clicked.
+3. Using addEventListener:
+-Use addEventListener to attach a click event to a third button that displays an
+alert saying "Hello!" when clicked.
+LEARNING OBJECTIVE:
+Learn and practice the three common methods to register events in JavaScript:
+inline event handlers, on-event handlers, and using addEventListener, to enhance
+your ability to make interactive web applications.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Methods Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Event Registration Methods</h1>
+    <button id="inlineBtn" >Click Me! (Inline)</button>
+
+    <button id="onEventBtn">Click Me! (On-event)</button>
+    <button id="listenerBtn">Click Me! (AddEventListener)</button>
+    <script>
+        // Inline Event Handler
+        document.getElementById("inlineBtn").onclick = function() {
+            this.textContent = "Clicked!";
+        };
+
+        // On-event Handler
+        document.getElementById("onEventBtn").onclick = function() {
+            this.style.backgroundColor = "blue";
+        };
+
+        // Using addEventListener
+        document.getElementById("listenerBtn").addEventListener("click", function() {
+            alert("Hello!");
+        });
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
