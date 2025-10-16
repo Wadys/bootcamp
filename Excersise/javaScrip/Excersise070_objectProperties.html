@@ -1,0 +1,51 @@
+<!--
+Instructions:
+1. Event Type:
+-Attach an event listener to a button that logs the event type to the console
+when clicked.
+2. Event Target:
+-Attach an event listener to a parent div that changes the text of the target
+element to "I was clicked!" when any child element inside the div is clicked.
+3.Event CurrentTarget:
+-Attach an event listener to the same parent div that changes the background
+color of the currentTarget to yellow when clicked.
+Important: Write all your code and solutions in index.js.
+LEARNING OBJECTIVE:
+Learn to utilize key properties of the event object such as type, target, and
+currentTarget to handle events dynamically and understand the context and source
+of events within your web applications.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object Properties Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Event Object Properties</h1>
+    <button id="eventTypeBtn">Log Event Type</button>
+    <div id="eventDiv">
+        <p>Click me or one of my siblings!</p>
+        <span>Another clickable item</span>
+    </div>
+    <script>
+        // Event Type
+        document.getElementById("eventTypeBtn").addEventListener("click", function(event) {
+            console.log(event.type);
+        });
+
+        // Event Target and CurrentTarget
+        document.getElementById("eventDiv").addEventListener("click", function(event) {
+            // Change the text of the target element
+            event.target.textContent = "I was clicked!";
+            // Change the background color of the currentTarget
+            event.currentTarget.style.backgroundColor = "yellow";
+        });
+    </script>
+</body>
+</html>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
