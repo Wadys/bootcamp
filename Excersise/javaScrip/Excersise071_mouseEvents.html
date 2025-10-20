@@ -1,0 +1,58 @@
+<!-- 
+Instructions:
+1. Click Event:
+-Attach a click event listener to the button with the ID clickBtn. When clicked,
+the button should change its text to "Clicked!". Use a variable named clickBtn
+for your button element.
+2. Mouseover and Mouseout Events:
+-Attach a mouseover event listener to the div with the ID hoverDiv. When the mouse
+hovers over this div, change its background color to blue. Use a variable named
+hoverDiv for your div element.
+-Additionally, attach a mouseout event listener to the same div (hoverDiv). When the
+mouse moves away from the div, reset its background color to white.
+3. Double Click Event:
+-Attach a double-click event listener to the paragraph with the ID dblClickP. When
+this paragraph is double-clicked, change its font style to italic. Use a variable
+named dblClickP for your paragraph element.
+Important: Write all your code and solutions in index.js.
+Learning Objective:
+Learn to handle commonly used mouse events such as click, mouseover, mouseout, and
+dblclick to enhance interactivity within web applications.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Mouse Events Exercise</h1>
+    <button id="clickBtn">Click Me!</button>
+    <div id="hoverDiv" style="width: 200px; height: 100px; background-color: white; border: 1px solid black;">
+    Hover over me!
+    </div>
+    <p id="dblClickP">Double-click me!</p>
+    <script>
+        const clickBtn = document.getElementById("clickBtn");
+        clickBtn.addEventListener("click",function(){
+            this.textContent= "Clicked!";
+        })
+        let hoverDiv = document.getElementById("hoverDiv");
+        hoverDiv.addEventListener("mouseover",function(){
+            this.style.backgroundColor = "blue"
+        })
+        hoverDiv.addEventListener("mouseout",function(){
+            this.style.backgroundColor = "white"
+        })
+        let dblClickP = document.getElementById("dblClickP");
+        dblClickP.addEventListener("dblclick", function(){
+            this.style.fontStyle = "italic";
+        })
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
