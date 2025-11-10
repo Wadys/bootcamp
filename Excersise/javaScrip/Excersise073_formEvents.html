@@ -1,0 +1,67 @@
+<!--
+Instructions:
+1. Handle Submit Event:
+-Attach a submit event listener to the form that prevents the default submission
+behavior and displays a message saying "Form Submitted!" in a <div> element with
+the id of message when the form is submitted.
+2. Handle Focus Event:
+-Attach a focus event listener to an input field. When the field gains focus,
+change its background color to light blue.
+3. Handle Blur Event:
+-Attach a blur event listener to the same input field. When the field loses focus,
+reset its background color to white and check if the input is empty. If empty,
+display a message "Input cannot be empty!" in another <div> element with the id of
+error
+Learning Objective:
+Learn to handle form events such as submit, focus, and blur to enhance user
+interactions and validations within web forms.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Form Events</h1>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+    <div id="error"></div>
+    <script>
+        const form = document.getElementById('myForm');
+        const usernameInput = document.getElementById('username');
+        const messageDiv = document.getElementById('message');
+        const errorDiv = document.getElementById('error');
+
+        // Handle Submit Event
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            messageDiv.textContent = 'Form Submitted!';
+        });
+
+        // Handle Focus Event
+        usernameInput.addEventListener('focus', function() {
+            this.style.backgroundColor = 'lightblue';
+        });
+
+        // Handle Blur Event
+        usernameInput.addEventListener('blur', function() {
+            this.style.backgroundColor = 'white';
+            if (this.value.trim() === '') {
+                errorDiv.textContent ='Input cannot be empty!';
+            } else {
+                errorDiv.textContent = '';
+            }
+        });
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>

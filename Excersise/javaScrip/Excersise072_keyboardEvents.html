@@ -1,0 +1,63 @@
+<!--
+Instructions
+1. Handle Keydown Event:
+Attach a keydown event listener to a text input field. When a key is pressed down,display the key property of the event in a dedicated <span> element.
+2. Handle Keypress Event:
+Attach a keypress event listener to the same text input field. Update another 
+<span> element to show the number of characters entered so far, not including
+special keys like backspace or enter.
+3. Handle Keyup Event:
+Attach a keyup event listener to update the background color of the text input
+field to #D3D3D3 when the 'Enter' key is released.
+Learning Objective:
+Learn to handle keyboard events such as keydown, keypress, and keyup to enhance
+interactivity within web applications, focusing on event properties like keyCode
+or key. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <h1>Keyboard Events Exercise</h1>
+    <label for="inputField">Type something:</label>
+    <input id="inputField" type="text">
+    <p>Key Pressed: <span id="keyPressedDisplay"></span></p>
+    <p>Characters Entered: <span id="charCountDisplay"></span></p>
+    <script>
+        const inputField = document.getElementById('inputField');
+        const keyPressedDisplay = document.getElementById('keyPressedDisplay');
+        const charCountDisplay = document.getElementById('charCountDisplay');
+
+        let charCount = 0;
+
+        // Handle Keydown Event
+        inputField.addEventListener('keydown', (event) => {
+            keyPressedDisplay.textContent = event.key;
+        });
+
+        // Handle Keypress Event
+        inputField.addEventListener('keypress', (event) => {
+            // Increment character count only for printable characters
+            if (event.key.length === 1) {
+                charCount++;
+                charCountDisplay.textContent = charCount;
+            }
+        });
+
+        // Handle Keyup Event
+        inputField.addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                inputField.style.backgroundColor = '#D3D3D3';
+            }
+        });
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
