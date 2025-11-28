@@ -1,0 +1,66 @@
+<!--
+Instructions
+1. Event Handlers Setup:
+-Attach two sets of event listeners to both the parentDiv and the childButton:
+ -Bubbling Phase: Set event listeners for the bubbling phase (the third argument
+ in addEventListener is false or omitted). In these handlers:
+  -Log "Parent Div clicked!" when parentDiv is clicked.
+  -Log "Button clicked!" when childButton is clicked. Additionally, call
+  event.stopPropagation() in the childButton's bubbling phase handler to prevent 
+  the event from bubbling up to the parentDiv.
+ -Capturing Phase: Set event listeners for the capturing phase (the third argument
+ in addEventListener is true). In these handlers:
+  -Log "Parent Div clicked during capture!" when parentDiv is clicked.
+  -Log "Button clicked during capture!" when childButton is clicked.
+2. Expected Behaviors:
+-On childButton Click:
+ -The console should log "Button clicked!" and "Button clicked during capture!" due
+to the direct click event handlers attached to the childButton.
+ -The console should also log "Parent Div clicked during capture!" due to the
+ capturing
+phase on the parentDiv.
+ -The console should not log "Parent Div clicked!" because the bubbling phase should
+be stopped by event.stopPropagation().
+-On parentDiv Click (not on the button but on the remaining area of the div):
+ -The console should log both "Parent Div clicked during capture!" and "Parent Div
+clicked!" reflecting the event capturing and bubbling phases respectively.
+Learning objective:
+Understand and differentiate between event bubbling and event capturing, and 
+learn how to control event propagation in the DOM. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Capture Exercise</title>
+</head>
+<body>
+    <div id="parentDiv" style="padding: 20px; border: 2px solid blue;">
+        Parent Div
+        <button id="childButton">Click Me!</button>
+    </div>
+    <script>
+        const parentDiv = document.getElementById('parentDiv');
+        const childButton = document.getElementById('childButton');
+
+        // Bubbling phase event listeners
+        parentDiv.addEventListener('click', function() {
+            console.log('Parent Div clicked!');
+        });
+
+        childButton.addEventListener('click', function(event) {
+            console.log('Button clicked!');
+            event.stopPropagation(); // Prevents bubbling to parentDiv
+        });
+
+        // Capturing phase event listeners
+        parentDiv.addEventListener('click', function() {
+            console.log('Parent Div clicked during capture!');
+        }, true);
+
+        childButton.addEventListener('click', function() {
+            console.log('Button clicked during capture!');
+        }, true);
+    </script>
+</body>
+</html>
