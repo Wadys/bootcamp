@@ -1,28 +1,3 @@
-// const outerDiv = document.getElementById("outer");
-// const innerDiv = document.getElementById("inner");
-// const middleDiv = document.getElementById("middle");
-
-// function logEvent(event) {
-//     console.log(`${event.target.id}, ${event.type}, 
-//         handled at: ${event.eventPhase}`
-//     );
-//     if (event.target.id === "inner") {
-//         event.stopPropagation();
-//         console.log("Propagation stopped in middle element");
-//     }
-// }
-
-// //Bubbling Phase
-// outerDiv.addEventListener("click", logEvent, false);
-// innerDiv.addEventListener("click", logEvent, false);
-// middleDiv.addEventListener("click", logEvent, false);
-// //Capture Phase
-// outerDiv.addEventListener("click", logEvent, true);
-// innerDiv.addEventListener("click", logEvent, true);
-// middleDiv.addEventListener("click", logEvent, true);
-
-
-
 // Selecting elements
 const outer = document.getElementById("outer");
 const middle = document.getElementById("middle");
