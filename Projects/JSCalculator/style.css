@@ -97,3 +97,26 @@ button:focus {
         width: 95%;
     }
 }
+
+footer{
+    font-size: small;
+    padding: 10px 0px 0 0;
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+.wrapper{
+    border-top: 1px solid #ddd;
+}
+footer a{
+    padding: 0 4px;
+    border-left: 1px solid #ddd;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease;
+    font-weight: bold;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: black;
+}
