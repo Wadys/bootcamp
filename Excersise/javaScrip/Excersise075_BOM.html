@@ -1,0 +1,47 @@
+<!--
+Instructions:
+1. Display Window Dimensions:
+-Attach an event listener to the window that updates a <div> to display the current
+window innerWidth and innerHeight whenever the window is resized.
+2. Display URL Information:
+-On page load, display the current URL using the location.href property in a
+separate <div>.
+3. Display Browser Information:
+-Use the navigator.userAgent property to show information about the user's browser
+in another <div>.
+Learning Objective:
+Learn to utilize important properties of the Window object such as innerWidth,
+innerHeight, location, and navigator to enhance the functionality and user experience
+of web applications. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Properties Exercise</title>
+    <link rel="icon" type="image/x-icon" href="/examples/html/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <h1>Window Object Properties</h1>
+    <div id="dimensions">Dimensions will be shown here on resize.</div>
+    <div id="urlInfo">URL Info: </div>
+    <div id="browserInfo">Browser Info: </div>
+    <script>
+        const dimensionsDiv = document.getElementById('dimensions');
+        dimensionsDiv.textContent = `Width: ${window.innerWidth}, Height: ${window.innerHeight}`;
+        window.addEventListener('resize', () => {
+            dimensionsDiv.textContent = `Width: ${window.innerWidth}, Height: ${window.innerHeight}`;
+        });
+
+        const urlInfoDiv = document.getElementById('urlInfo');
+        urlInfoDiv.textContent = `URL Info: ${window.location.href}`;
+
+        const browserInfoDiv = document.getElementById('browserInfo');
+        browserInfoDiv.textContent = `Browser Info: ${navigator.userAgent}`;
+    </script>
+</body>
+<footer class="wrapper">
+    <br><a href="/index.html">Home</a>
+</footer>
+</html>
