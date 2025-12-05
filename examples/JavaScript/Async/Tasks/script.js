@@ -7,7 +7,7 @@ setTimeout(renderImage, 10000);
 console.log("Set timeout executed", new Date().getSeconds());
 
 function renderImage() {
-     console.log("Hello World", new Date().getSeconds());
+    console.log("Hello World", new Date().getSeconds());
 }
 
 function myDisplayer(value) {
