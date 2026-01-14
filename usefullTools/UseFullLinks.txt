@@ -11,3 +11,8 @@ transitioning
 https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
 This links helps understand mode the functionality of the nodes and type of nodes,
 Showing description and Examples
+
+4. mdn 
+https://devdocs.io/
+This links DevDocs combines multiple API documentations in a fast, organized,
+and searchable interface. Here's what you should know before you start:
