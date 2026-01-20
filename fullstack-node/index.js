@@ -44,4 +44,3 @@ fs.rename("example.txt", "newExample.txt", (err) => {
     }
     console.log("File renamed successfully");
 });
- 
