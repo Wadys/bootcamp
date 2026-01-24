@@ -1,5 +1,0 @@
-GET http://localhost:3001/users/
-GET http://localhost:3001/users/admin
-GET http://localhost:3001/users/admin/active
-GET http://localhost:3001/users/admin/?order=asc&limit=10&page=1
-GET http://localhost:3001/tasks/admin
