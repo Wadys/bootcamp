@@ -1,9 +1,13 @@
-const express = require('express');const fs = require('fs');
+const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const morgan = require('morgan');
-const tasksRouter = require('./tasks/tasks.router');
 const cors = require('cors');
 const responseFormatter = require('./middleware/responseFormatter.js');
+const tasksRouter = require('./tasks/tasks.router');
+const {StatusCodes} = require('http-status-codes');
+const authRouter = require('./auth/auth.router.js');
+
 
 const app = express();
 const port = 3001;
@@ -19,7 +23,7 @@ app.use(express.json());
 //app.use(cors(corsOptions)); 
 app.use(cors()); //This is to enable CORS for all routes is a security risk in production
 
-let accessLogStream = fs.createWriteStream(
+var accessLogStream = fs.createWriteStream(
     path.join(__dirname, "..","access.log"), 
     {
         flags: 'a',
@@ -34,10 +38,16 @@ let accessLogStream = fs.createWriteStream(
 // app.use(middleWare);
 app.use(morgan('combined', { stream: accessLogStream}));
 app.use(responseFormatter);
+
+/*define routes*/
+app.use('/', authRouter);
 app.use('/', tasksRouter);
-app.use(cors());
+
+app.use((req, res) => {
+    res.status(StatusCodes.NOT_FOUND).json(null);
+});
 
 app.listen(port, () => {
-    console.log(`App listening on port no: ${port}`);
+    console.log(`App listening on port: ${port}`);
 
 });
