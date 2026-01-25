@@ -3,6 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const tasksRouter = require('./tasks/tasks.router');
 const cors = require('cors');
+const responseFormatter = require('./middleware/responseFormatter.js');
 
 const app = express();
 const port = 3001;
@@ -32,6 +33,7 @@ let accessLogStream = fs.createWriteStream(
 // }
 // app.use(middleWare);
 app.use(morgan('combined', { stream: accessLogStream}));
+app.use(responseFormatter);
 app.use('/', tasksRouter);
 app.use(cors());
 
