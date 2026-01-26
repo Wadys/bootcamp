@@ -7,6 +7,7 @@ const responseFormatter = require('./middleware/responseFormatter.js');
 const tasksRouter = require('./tasks/tasks.router');
 const {StatusCodes} = require('http-status-codes');
 const authRouter = require('./auth/auth.router.js');
+const usersRouter = require('./users/users.router.js');
 
 
 const app = express();
@@ -40,12 +41,15 @@ app.use(morgan('combined', { stream: accessLogStream}));
 app.use(responseFormatter);
 
 /*define routes*/
-app.use('/', authRouter);
+app.use('/auth', authRouter);
 app.use('/', tasksRouter);
+app.use('/users', usersRouter);
 
 app.use((req, res) => {
     res.status(StatusCodes.NOT_FOUND).json(null);
 });
+
+
 
 app.listen(port, () => {
     console.log(`App listening on port: ${port}`);
