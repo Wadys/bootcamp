@@ -16,3 +16,21 @@ Showing description and Examples
 https://devdocs.io/
 This links DevDocs combines multiple API documentations in a fast, organized,
 and searchable interface. Here's what you should know before you start:
+
+
+5. Git Ignore generator: 
+https://www.toptal.com/developers/gitignore
+This links create the GIT ignore file contente
+
+6. NPM
+https://www.npmjs.com/
+This link lets you find the nodes packages needed and the terminal comands to install
+them
+
+7. Node.JS Documentation
+https://nodejs.org/docs/latest/api/
+Documentation related to the API endpoitns for node.js
+
+8. Mongoose data types documentation
+https://mongoosejs.com/docs/guide.html
+Documentation related to Mongoose Data Types

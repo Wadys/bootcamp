@@ -1,0 +1,26 @@
+***Importan Data***
+mongodb+srv://wadys:tmZLOasoHZfZ78Nw@nodejs.3tq43wb.mongodb.net/
+tmZLOasoHZfZ78Nw
+mongosh "mongodb+srv://nodejs.3tq43wb.mongodb.net/" --apiVersion 1 --username wadys
+
+
+****Commands****
+use fullstackTasks ***Connects to Data Base
+db.users.insertOne({firstName:"John",lastName:"Doe",age:32})  //Inserts User
+db.users.insertOne({firstName:"Mark",lastName:"Doe",age:22,email:"mark@doe.com"}) //Inserts user with different data
+db.tasks.insertMany([{title: "Task one", users: ["John"], isComplete:false},{title:"Task two", users:["john","mark"],isComplete:true}]) //Inserts multiple Entries in one
+db.tasks.find({isComplete:false}) //Looks in database for all tasks that hace is complete set to false
+db.tasks.find({"_id":ObjectId('6977cdfaccdfdbe873628ca2 //Searches an entry in the tasks by an specific task-id
+db.tasks.findOne({}) //Searches for the first item in the tasks elements
+db.users.updateOne({"_id": ObjectId("6977cdfaccdfdbe873628ca")}, {$set: {email: "john@doe.com", age:22}, $currentDate:{lastUpdated:true}})//Updats a user entry by user-id
+db.users.replaceOne({"_id":ObjectId('6977cb8eccdfdbe873628ca0')},{name:"Alice",age:30}) //Redefines the data for a user with the new data using the user-Id
+
+{
+  "_id": {
+    "$oid": "6977cb8eccdfdbe873628ca0"
+  },
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 32
+}
+
