@@ -2,8 +2,8 @@ POST http://localhost:3001/tasks
 Content-Type: application/json
 
 {
-    "title": "Tittle of the task",
-    "Date": "2024-07-01T12:00:00Z",
+    "title": "Tittle of the task 3",
+    "dueDate": "2024-07-01T12:00:00Z",
     "description": "This is a new task created via POST request.",
     "priority": "normal",
     "status": "todo"
