@@ -1,2 +1,11 @@
 PATCH http://localhost:3001/tasks
 Content-Type: application/json
+
+{
+    "_id": "697a94baf476d3429c6c41d6",
+    "title": "Updated Task",
+    "description": "Updated description for the task.",
+    "status": "todo",
+    "priority": "normal",
+    "dueDate": "2024-12-31T23:59:59.999Z"
+}
