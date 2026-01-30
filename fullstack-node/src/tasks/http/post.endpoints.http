@@ -2,9 +2,10 @@ POST http://localhost:3001/tasks
 Content-Type: application/json
 
 {
-    "title": "Tittle of the task 2",
+    "title": "Tittle of the task 5",
     "dueDate": "2024-07-01T12:00:00Z",
     "description": "This is a new task created via POST request.",
     "priority": "normal",
-    "status": "todo"
+    "status": "todo",
+    "ExtraField": "This field is not defined in the schema",
 }

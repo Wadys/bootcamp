@@ -34,3 +34,16 @@ Documentation related to the API endpoitns for node.js
 8. Mongoose data types documentation
 https://mongoosejs.com/docs/guide.html
 Documentation related to Mongoose Data Types
+
+9. Regular Expresions 101
+https://regex101.com/
+regular expression debugger with real time explanation, error detection, and highlighting
+
+10. Express Validator
+https://express-validator.github.io/docs
+It allows you to combine them in many ways so that you can validate and sanitize your express requests, and offers tools 
+to determine if the request is valid or not, which data was matched according to your validators, and so on.
+
+11. What is my IP address
+https://whatismyipaddress.com/
+Returns the your machines current IP address
