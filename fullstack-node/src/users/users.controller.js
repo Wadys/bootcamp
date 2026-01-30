@@ -1,4 +1,5 @@
-const {StatusCodes, ReasonPhrases} = require("http-status-codes");
+const createUserProvider = require("./providers/createUserProvider.js");
+const {StatusCodes} = require("http-status-codes");
 
 function handleGetUsers(req, res) {
     let response =[
@@ -22,11 +23,12 @@ function handleGetUsers(req, res) {
     res.status(StatusCodes.OK).json(response);
 }
 
-function handleCreateUsers(req, res) {
-    res.send("Create User");
+async function handleCreateUser(req, res) {
+    const user = await createUserProvider(req, res);
+    res.status(StatusCodes.CREATED).json(user);
 }
 
 module.exports = {
     handleGetUsers,
-    handleCreateUsers
+    handleCreateUser
 };
